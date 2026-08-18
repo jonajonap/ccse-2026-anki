@@ -1,4 +1,4 @@
-# 🇪🇸 CCSE 2026 Anki SRS & Simulador Oficial
+# 🇪🇸 CCSE 2026 Anki SRS & Simulador
 
 [![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-blue.svg)](LICENSE)
 [![Edición: CCSE 2026](https://img.shields.io/badge/CCSE-Edici%C3%B3n%202026-emerald.svg)](#fuente-de-las-preguntas)

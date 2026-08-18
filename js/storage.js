@@ -11,7 +11,7 @@ const STORAGE_KEYS = {
 
 const DEFAULT_SETTINGS = {
   newCardsPerDay: 20,
-  theme: 'dark',
+  theme: 'light',
   soundEnabled: true,
   autoFlipOnSelect: false
 };

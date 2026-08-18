@@ -1,6 +1,7 @@
 /**
  * Controlador Principal de la Aplicación CCSE 2026 Anki.
  * Gestiona el flujo de vistas, eventos de usuario, catálogo, examen y atajos de teclado.
+ * Estilo: Industrial Brutalism & Tactical Telemetry UI.
  */
 
 class CCSEApp {
@@ -36,15 +37,13 @@ class CCSEApp {
     this.srsEngine = new SRSEngine(this.storage);
     this.examEngine = new ExamEngine(this.allQuestions);
 
-    // 3. Aplicar tema guardado
-    this.applyTheme(this.storage.getSettings().theme);
-
-    // 4. Inicializar componentes
+    // 3. Inicializar componentes y badges
     this.updateGlobalBadges();
     this.initKeyboardShortcuts();
+    this.switchView('anki');
     this.startAnkiSession(this.currentDeckFilter);
 
-    // 5. Renderizar iconos de Lucide
+    // 4. Renderizar iconos de Lucide
     if (window.lucide) {
       window.lucide.createIcons();
     }
@@ -56,22 +55,35 @@ class CCSEApp {
   switchView(viewName) {
     this.currentView = viewName;
 
-    // Actualizar tabs en header
     const views = ['anki', 'catalog', 'exam', 'stats'];
     views.forEach(v => {
       const btn = document.getElementById(`nav-btn-${v}`);
+      const mobBtn = document.getElementById(`mob-btn-${v}`);
       const section = document.getElementById(`view-${v}`);
       
+      const isActive = v === viewName;
+
+      // Desktop Nav (Industrial Sidebar Item)
       if (btn) {
-        if (v === viewName) {
-          btn.className = 'nav-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all bg-brand-600 text-white shadow-sm';
+        if (isActive) {
+          btn.className = 'px-3.5 py-3 text-xs font-mono font-black uppercase tracking-wider border-2 border-black bg-black text-white shadow-brutal-sm flex items-center justify-between transition active:translate-x-0.5 active:translate-y-0.5 w-full text-left';
         } else {
-          btn.className = 'nav-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-slate-800/60';
+          btn.className = 'px-3.5 py-3 text-xs font-mono font-bold uppercase tracking-wider border-2 border-black bg-white text-black shadow-brutal-sm hover:bg-[#EAE8E3] flex items-center justify-between transition active:translate-x-0.5 active:translate-y-0.5 w-full text-left';
         }
       }
 
+      // Mobile Nav (Rigid Segmented Grid)
+      if (mobBtn) {
+        if (isActive) {
+          mobBtn.className = 'py-2.5 flex flex-col items-center justify-center font-mono text-[10px] font-black uppercase bg-black text-white';
+        } else {
+          mobBtn.className = 'py-2.5 flex flex-col items-center justify-center font-mono text-[10px] font-black uppercase bg-white text-black hover:bg-[#EAE8E3]';
+        }
+      }
+
+      // Secciones
       if (section) {
-        if (v === viewName) {
+        if (isActive) {
           section.classList.remove('hidden');
         } else {
           section.classList.add('hidden');
@@ -94,9 +106,11 @@ class CCSEApp {
     const stats = this.storage.getStats();
     const srsStats = this.srsEngine.calculateStats(this.allQuestions);
 
-    // Racha
+    // Racha (Desktop & Mobile)
     const streakEl = document.getElementById('streak-counter');
     if (streakEl) streakEl.textContent = stats.streak || 0;
+    const streakMob = document.getElementById('streak-counter-mob');
+    if (streakMob) streakMob.textContent = stats.streak || 0;
 
     // Dominadas
     const masteredEl = document.getElementById('mastered-counter');
@@ -184,13 +198,13 @@ class CCSEApp {
     const optionsContainer = document.getElementById('card-options-front');
 
     if (idBadge) idBadge.textContent = `#${card.id}`;
-    if (taskBadge) taskBadge.textContent = `Tarea ${card.tarea}`;
-    if (typeBadge) typeBadge.textContent = card.tipo === 'verdadero_falso' ? 'Verdadero / Falso' : 'Opción Múltiple';
+    if (taskBadge) taskBadge.textContent = `TAREA ${card.tarea}`;
+    if (typeBadge) typeBadge.textContent = card.tipo === 'verdadero_falso' ? 'V / F' : 'OPCIÓN MÚLTIPLE';
     
     if (intervalBadge) {
-      if (srs.state === 'new') intervalBadge.textContent = 'Nueva';
-      else if (srs.state === 'mastered') intervalBadge.textContent = `Dominada (${srs.interval}d)`;
-      else intervalBadge.textContent = `Repaso (${srs.interval}d)`;
+      if (srs.state === 'new') intervalBadge.textContent = 'NUEVA';
+      else if (srs.state === 'mastered') intervalBadge.textContent = `DOMINADA (${srs.interval}D)`;
+      else intervalBadge.textContent = `REPASO (${srs.interval}D)`;
     }
 
     if (qText) qText.textContent = card.pregunta;
@@ -200,62 +214,36 @@ class CCSEApp {
       optionsContainer.innerHTML = '';
       Object.entries(card.opciones).forEach(([key, val]) => {
         const optBtn = document.createElement('button');
-        optBtn.className = 'option-btn w-full p-3.5 rounded-2xl bg-slate-950/60 hover:bg-slate-800/80 border border-slate-800 text-left text-xs sm:text-sm font-medium flex items-center justify-between text-slate-200 transition cursor-pointer';
+        optBtn.className = 'w-full p-2 sm:p-3.5 border-2 border-black bg-[#F4F4F0] text-left font-mono text-xs sm:text-sm font-bold flex items-center justify-between hover:bg-[#EAE8E3] hover:shadow-brutal-sm transition cursor-pointer text-black';
         optBtn.setAttribute('data-option-key', key);
         optBtn.onclick = () => this.selectOptionOnFront(key);
 
         optBtn.innerHTML = `
-          <div class="flex items-center gap-3">
-            <span class="w-6 h-6 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center font-mono font-bold text-xs uppercase text-slate-300">${key}</span>
-            <span>${val}</span>
+          <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+            <span class="w-6 h-6 sm:w-7 sm:h-7 bg-black text-white font-mono font-black text-xs flex items-center justify-center uppercase shrink-0 border border-black">${key}</span>
+            <span class="leading-tight sm:leading-snug font-sans text-xs sm:text-base font-bold uppercase text-black truncate sm:whitespace-normal">${val}</span>
           </div>
-          <span class="opt-check-indicator hidden w-5 h-5 rounded-full bg-brand-500/20 text-brand-400 items-center justify-center">
-            <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          <span class="opt-check-indicator hidden w-5 h-5 sm:w-6 sm:h-6 bg-black text-white items-center justify-center shrink-0 border border-black">
+            <i data-lucide="check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
           </span>
         `;
         optionsContainer.appendChild(optBtn);
       });
     }
 
-    // Datos del Back
-    const backIdBadge = document.getElementById('back-card-id-badge');
-    const backTaskBadge = document.getElementById('back-card-task-badge');
-    const backQText = document.getElementById('back-card-question-text');
-    const backCorrectAns = document.getElementById('back-correct-answer');
-    const backRecap = document.getElementById('back-options-recap');
-
-    if (backIdBadge) backIdBadge.textContent = `#${card.id}`;
-    if (backTaskBadge) backTaskBadge.textContent = `Tarea ${card.tarea}: ${card.tarea_nombre}`;
-    if (backQText) backQText.textContent = card.pregunta;
-    if (backCorrectAns) backCorrectAns.textContent = `${card.respuesta_correcta.toUpperCase()}) ${card.respuesta_correcta_texto}`;
-
-    // Recap de opciones en el Back
-    if (backRecap) {
-      backRecap.innerHTML = '';
-      Object.entries(card.opciones).forEach(([key, val]) => {
-        const isCorrect = key === card.respuesta_correcta;
-        const row = document.createElement('div');
-        row.className = `p-2 rounded-xl border flex items-center gap-2 ${
-          isCorrect 
-            ? 'bg-emerald-950/60 border-emerald-500/50 text-emerald-300 font-semibold' 
-            : 'bg-slate-900/40 border-slate-800/60 text-slate-400'
-        }`;
-        row.innerHTML = `
-          <span class="w-5 h-5 rounded flex items-center justify-center text-[10px] font-mono font-bold uppercase ${
-            isCorrect ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-400'
-          }">${key}</span>
-          <span>${val}</span>
-        `;
-        backRecap.appendChild(row);
-      });
-    }
+    // Renderizar estado inicial del reverso (sin selección previa todavía)
+    this.updateBackFaceState();
 
     // Previsualizaciones de Intervalos en los 4 botones
     const previews = this.srsEngine.getIntervalPreviews(card.id);
-    document.getElementById('preview-interval-again').textContent = previews.again;
-    document.getElementById('preview-interval-hard').textContent = previews.hard;
-    document.getElementById('preview-interval-good').textContent = previews.good;
-    document.getElementById('preview-interval-easy').textContent = previews.easy;
+    const pAgain = document.getElementById('preview-interval-again');
+    const pHard = document.getElementById('preview-interval-hard');
+    const pGood = document.getElementById('preview-interval-good');
+    const pEasy = document.getElementById('preview-interval-easy');
+    if (pAgain) pAgain.textContent = previews.again;
+    if (pHard) pHard.textContent = previews.hard;
+    if (pGood) pGood.textContent = previews.good;
+    if (pEasy) pEasy.textContent = previews.easy;
 
     this.updateSessionCounters();
     if (window.lucide) window.lucide.createIcons();
@@ -266,25 +254,129 @@ class CCSEApp {
     const card = this.studyQueue[this.currentIndex];
     const isCorrect = key === card.respuesta_correcta;
 
-    // Resaltar visualmente la opción seleccionada
+    // Resaltar visualmente la opción seleccionada en el anverso
     const optionsContainer = document.getElementById('card-options-front');
-    if (!optionsContainer) return;
+    if (optionsContainer) {
+      Array.from(optionsContainer.children).forEach(btn => {
+        const optKey = btn.getAttribute('data-option-key');
+        const indicator = btn.querySelector('.opt-check-indicator');
 
-    Array.from(optionsContainer.children).forEach(btn => {
-      const optKey = btn.getAttribute('data-option-key');
-      if (optKey === key) {
-        btn.className = `option-btn w-full p-3.5 rounded-2xl border text-left text-xs sm:text-sm font-medium flex items-center justify-between transition ${
-          isCorrect ? 'bg-emerald-950/60 border-emerald-500 text-emerald-200' : 'bg-rose-950/60 border-rose-500 text-rose-200'
-        }`;
-      } else {
-        btn.className = 'option-btn w-full p-3.5 rounded-2xl bg-slate-950/30 border border-slate-800/40 text-left text-xs sm:text-sm text-slate-500 transition opacity-50';
-      }
-    });
+        if (optKey === key) {
+          if (isCorrect) {
+            btn.className = 'w-full p-2 sm:p-3.5 border-2 border-black bg-[#EBF5EB] text-left font-mono text-xs sm:text-sm font-bold flex items-center justify-between text-emerald-950 shadow-brutal-sm transition';
+          } else {
+            btn.className = 'w-full p-2 sm:p-3.5 border-2 border-black bg-[#FFEBEB] text-left font-mono text-xs sm:text-sm font-bold flex items-center justify-between text-[#991B1B] shadow-brutal-sm transition';
+          }
+          if (indicator) {
+            indicator.className = 'opt-check-indicator flex w-5 h-5 sm:w-6 sm:h-6 items-center justify-center shrink-0 border border-black ' + (isCorrect ? 'bg-emerald-700 text-white' : 'bg-[#E61919] text-white');
+            indicator.innerHTML = isCorrect ? '<i data-lucide="check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>' : '<i data-lucide="x" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>';
+          }
+        } else {
+          btn.style.opacity = '0.35';
+          btn.style.pointerEvents = 'none';
+        }
+      });
+    }
 
-    // Auto-flip opcional o girar suavemente
+    // Actualizar el estado del reverso con la respuesta seleccionada por el usuario
+    this.updateBackFaceState();
+
+    // Auto-flip hacia la respuesta tras breve pausa para ver la pulsación
     setTimeout(() => {
-      this.flipCard();
-    }, 450);
+      if (!this.isCardFlipped) {
+        this.flipCard();
+      }
+    }, 420);
+  }
+
+  updateBackFaceState() {
+    if (this.currentIndex >= this.studyQueue.length) return;
+    const card = this.studyQueue[this.currentIndex];
+
+    // Datos del Back
+    const backIdBadge = document.getElementById('back-card-id-badge');
+    const backTaskBadge = document.getElementById('back-card-task-badge');
+    const backQText = document.getElementById('back-card-question-text');
+    const backStatusPill = document.getElementById('back-status-pill');
+    const backRecap = document.getElementById('back-options-recap');
+
+    if (backIdBadge) backIdBadge.textContent = `#${card.id}`;
+    if (backTaskBadge) backTaskBadge.textContent = `TAREA ${card.tarea}: ${card.tarea_nombre}`;
+    if (backQText) backQText.textContent = card.pregunta;
+
+    // Actualizar píldora de estado en la cabecera del reverso
+    if (backStatusPill) {
+      if (this.selectedOption !== null) {
+        const isCorrect = this.selectedOption === card.respuesta_correcta;
+        if (isCorrect) {
+          backStatusPill.className = 'px-2 sm:px-2.5 py-0.5 sm:py-1 bg-emerald-600 text-white font-mono text-[10px] sm:text-xs font-black uppercase tracking-wider flex items-center gap-1 sm:gap-1.5 border border-black shadow-brutal-sm';
+          backStatusPill.innerHTML = '<i data-lucide="check" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white"></i><span>ACIERTO</span>';
+        } else {
+          backStatusPill.className = 'px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#E61919] text-white font-mono text-[10px] sm:text-xs font-black uppercase tracking-wider flex items-center gap-1 sm:gap-1.5 border border-black shadow-brutal-sm';
+          backStatusPill.innerHTML = '<i data-lucide="x" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white"></i><span>FALLO</span>';
+        }
+      } else {
+        backStatusPill.className = 'px-2 sm:px-2.5 py-0.5 sm:py-1 bg-black text-white font-mono text-[10px] sm:text-xs font-black uppercase tracking-wider flex items-center gap-1 sm:gap-1.5 border border-black shadow-brutal-sm';
+        backStatusPill.innerHTML = '<i data-lucide="shield-check" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400"></i><span>SOLUCIÓN OFICIAL</span>';
+      }
+    }
+
+    // Recap de Opciones en el Back con distinciones de tu elección vs correcta
+    if (backRecap) {
+      backRecap.innerHTML = '';
+      Object.entries(card.opciones).forEach(([key, val]) => {
+        const isCorrect = (key === card.respuesta_correcta);
+        const isSelected = (key === this.selectedOption);
+        const row = document.createElement('div');
+
+        if (isSelected && isCorrect) {
+          row.className = 'p-1.5 sm:p-2.5 border-2 border-black bg-emerald-100 text-emerald-950 font-bold flex items-center justify-between gap-1.5 shadow-brutal-sm';
+          row.innerHTML = `
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-5 h-5 sm:w-6 sm:h-6 font-mono font-black text-[10px] sm:text-xs flex items-center justify-center uppercase border border-black shrink-0 bg-emerald-700 text-white">${key}</span>
+              <span class="leading-tight font-sans text-xs sm:text-sm font-bold uppercase truncate">${val}</span>
+            </div>
+            <span class="px-1.5 py-0.5 bg-emerald-800 text-white font-mono text-[9px] sm:text-[10px] font-black uppercase border border-black flex items-center gap-1 shrink-0">
+              <i data-lucide="check-circle-2" class="w-3 h-3 text-emerald-300"></i>
+              <span>TU RESPUESTA (CORRECTA)</span>
+            </span>
+          `;
+        } else if (isSelected && !isCorrect) {
+          row.className = 'p-1.5 sm:p-2.5 border-2 border-black bg-[#FFEBEB] text-red-950 font-bold flex items-center justify-between gap-1.5 shadow-brutal-sm';
+          row.innerHTML = `
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-5 h-5 sm:w-6 sm:h-6 font-mono font-black text-[10px] sm:text-xs flex items-center justify-center uppercase border border-black shrink-0 bg-[#E61919] text-white">${key}</span>
+              <span class="leading-tight font-sans text-xs sm:text-sm font-bold uppercase truncate">${val}</span>
+            </div>
+            <span class="px-1.5 py-0.5 bg-[#E61919] text-white font-mono text-[9px] sm:text-[10px] font-black uppercase border border-black flex items-center gap-1 shrink-0">
+              <i data-lucide="x-circle" class="w-3 h-3 text-white"></i>
+              <span>TU ELECCIÓN</span>
+            </span>
+          `;
+        } else if (isCorrect) {
+          row.className = 'p-1.5 sm:p-2.5 border-2 border-black bg-emerald-50 text-emerald-950 font-bold flex items-center justify-between gap-1.5 shadow-brutal-sm';
+          row.innerHTML = `
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-5 h-5 sm:w-6 sm:h-6 font-mono font-black text-[10px] sm:text-xs flex items-center justify-center uppercase border border-black shrink-0 bg-emerald-700 text-white">${key}</span>
+              <span class="leading-tight font-sans text-xs sm:text-sm font-bold uppercase truncate">${val}</span>
+            </div>
+            <span class="px-1.5 py-0.5 bg-emerald-700 text-white font-mono text-[9px] sm:text-[10px] font-black uppercase border border-black flex items-center gap-1 shrink-0">
+              <i data-lucide="check" class="w-3 h-3 text-emerald-300"></i>
+              <span>RESPUESTA CORRECTA</span>
+            </span>
+          `;
+        } else {
+          row.className = 'p-1.5 sm:p-2.5 border-2 border-neutral-300 bg-[#F4F4F0] text-ink-muted font-medium flex items-center gap-2 opacity-60';
+          row.innerHTML = `
+            <span class="w-5 h-5 sm:w-6 sm:h-6 font-mono font-bold text-[10px] sm:text-xs flex items-center justify-center uppercase border border-neutral-400 shrink-0 bg-neutral-200 text-neutral-600">${key}</span>
+            <span class="leading-tight font-sans text-xs sm:text-sm uppercase truncate">${val}</span>
+          `;
+        }
+        backRecap.appendChild(row);
+      });
+    }
+
+    if (window.lucide) window.lucide.createIcons();
   }
 
   flipCard() {
@@ -292,6 +384,7 @@ class CCSEApp {
     if (!flashcard) return;
     this.isCardFlipped = !this.isCardFlipped;
     flashcard.classList.toggle('is-flipped', this.isCardFlipped);
+    this.updateBackFaceState();
     if (window.lucide) window.lucide.createIcons();
   }
 
@@ -323,10 +416,11 @@ class CCSEApp {
   onSessionFinished() {
     const wrapper = document.getElementById('flashcard-wrapper');
     const completedView = document.getElementById('session-completed-view');
+
     if (wrapper) wrapper.classList.add('hidden');
     if (completedView) completedView.classList.remove('hidden');
+    this.updateSessionCounters();
 
-    // Confetti de celebración
     if (window.confetti) {
       window.confetti({
         particleCount: 80,
@@ -334,23 +428,24 @@ class CCSEApp {
         origin: { y: 0.6 }
       });
     }
-
-    this.updateGlobalBadges();
   }
 
   updateSessionCounters() {
-    const remaining = this.studyQueue.length - this.currentIndex;
     const total = this.studyQueue.length;
+    const current = this.currentIndex;
+    const progress = total > 0 ? Math.min(100, Math.round((current / total) * 100)) : 100;
 
-    const progressBar = document.getElementById('session-progress-bar');
-    if (progressBar && total > 0) {
-      const pct = Math.min(100, Math.round((this.currentIndex / total) * 100));
-      progressBar.style.width = `${pct}%`;
-    }
+    const bar = document.getElementById('session-progress-bar');
+    if (bar) bar.style.width = `${progress}%`;
 
     const doneCount = document.getElementById('session-done-count');
     if (doneCount) doneCount.textContent = this.sessionCompletedCount;
 
+    const newCards = this.studyQueue.filter(c => this.srsEngine.getCardSRS(c.id).state === 'new').length;
+    const newCount = document.getElementById('session-new-count');
+    if (newCount) newCount.textContent = newCards;
+
+    const remaining = total - current;
     const dueCount = document.getElementById('session-due-count');
     if (dueCount) dueCount.textContent = remaining > 0 ? remaining : 0;
   }
@@ -385,20 +480,20 @@ class CCSEApp {
         const learningPct = Math.round((taskData.learning / taskData.total) * 100);
 
         const row = document.createElement('div');
-        row.className = 'p-4 rounded-2xl bg-slate-900/60 border border-slate-800';
+        row.className = 'p-4 border-2 border-black bg-white shadow-brutal-sm';
         row.innerHTML = `
-          <div class="flex items-center justify-between text-xs font-semibold text-slate-200 mb-2">
+          <div class="flex items-center justify-between text-xs font-mono font-bold uppercase text-black mb-2">
             <span class="flex items-center gap-2">
-              <span class="w-5 h-5 rounded bg-brand-500/20 text-brand-400 flex items-center justify-center font-mono text-[10px] font-bold">${t}</span>
-              <span>Tarea ${t}: ${taskNames[t-1]}</span>
+              <span class="w-6 h-6 bg-black text-white flex items-center justify-center font-mono text-xs font-black">[${t}]</span>
+              <span>TAREA ${t}: ${taskNames[t-1]}</span>
             </span>
-            <span class="font-mono text-slate-400">${taskData.mastered} / ${taskData.total} dominadas (${masteredPct}%)</span>
+            <span class="text-black font-black">${taskData.mastered} / ${taskData.total} (${masteredPct}%)</span>
           </div>
 
-          <div class="w-full bg-slate-950 rounded-full h-2 flex overflow-hidden border border-slate-800/80">
-            <div style="width: ${masteredPct}%" class="bg-emerald-500 h-full" title="Dominadas: ${taskData.mastered}"></div>
-            <div style="width: ${reviewPct}%" class="bg-blue-500 h-full" title="En Repaso: ${taskData.review}"></div>
-            <div style="width: ${learningPct}%" class="bg-amber-500 h-full" title="Aprendiendo: ${taskData.learning}"></div>
+          <div class="w-full border-2 border-black bg-white h-3 flex overflow-hidden p-0.5">
+            <div style="width: ${masteredPct}%" class="bg-emerald-600 h-full" title="Dominadas: ${taskData.mastered}"></div>
+            <div style="width: ${reviewPct}%" class="bg-black h-full" title="En Repaso: ${taskData.review}"></div>
+            <div style="width: ${learningPct}%" class="bg-yellow-400 h-full" title="Aprendiendo: ${taskData.learning}"></div>
           </div>
         `;
         tasksContainer.appendChild(row);
@@ -407,32 +502,14 @@ class CCSEApp {
   }
 
   // =========================================================================
-  // AJUSTES, TEMAS Y BACKUP
+  // AJUSTES Y BACKUP
   // =========================================================================
-  toggleTheme() {
-    const isDark = document.documentElement.classList.contains('dark');
-    const newTheme = isDark ? 'light' : 'dark';
-    this.applyTheme(newTheme);
-    this.storage.saveSettings({ theme: newTheme });
-  }
-
-  applyTheme(theme) {
-    const icon = document.getElementById('theme-icon');
-    if (theme === 'light') {
-      document.documentElement.classList.remove('dark');
-      if (icon) icon.setAttribute('data-lucide', 'moon');
-    } else {
-      document.documentElement.classList.add('dark');
-      if (icon) icon.setAttribute('data-lucide', 'sun');
-    }
-    if (window.lucide) window.lucide.createIcons();
-  }
-
   openSettingsModal() {
     const modal = document.getElementById('settings-modal');
     const input = document.getElementById('setting-new-cards');
     if (input) input.value = this.storage.getSettings().newCardsPerDay || 20;
     if (modal) modal.classList.remove('hidden');
+    if (window.lucide) window.lucide.createIcons();
   }
 
   closeSettingsModal() {
@@ -462,6 +539,7 @@ class CCSEApp {
   openImportModal() {
     const modal = document.getElementById('import-modal');
     if (modal) modal.classList.remove('hidden');
+    if (window.lucide) window.lucide.createIcons();
   }
 
   closeImportModal() {
@@ -495,7 +573,6 @@ class CCSEApp {
   // =========================================================================
   initKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
-      // Ignorar si el usuario está escribiendo en un input o textarea
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) return;
 
       if (this.currentView === 'anki') {
@@ -503,15 +580,17 @@ class CCSEApp {
           e.preventDefault();
           this.flipCard();
         } else if (this.isCardFlipped) {
-          // Tarjeta volteada: Teclas 1, 2, 3, 4 califican
           if (e.key === '1') this.rateCard(1);
           if (e.key === '2') this.rateCard(2);
           if (e.key === '3') this.rateCard(3);
           if (e.key === '4') this.rateCard(4);
         } else {
-          // Tarjeta no volteada: Teclas a, b, c seleccionan opción
           const k = e.key.toLowerCase();
-          if (['a', 'b', 'c'].includes(k)) {
+          const card = this.studyQueue[this.currentIndex];
+          if (card && card.tipo === 'verdadero_falso') {
+            if (k === 'v' || k === 'a') this.selectOptionOnFront('a');
+            else if (k === 'f' || k === 'b') this.selectOptionOnFront('b');
+          } else if (['a', 'b', 'c'].includes(k)) {
             this.selectOptionOnFront(k);
           }
         }
@@ -541,9 +620,9 @@ class CCSECatalog {
     this.currentTask = task;
     document.querySelectorAll('.cat-task-btn').forEach(btn => {
       if (btn.getAttribute('data-task') === task) {
-        btn.className = 'cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-brand-600 text-white shadow-sm';
+        btn.className = 'cat-task-btn px-4 py-2 border-2 border-black bg-black text-white font-mono text-xs font-black uppercase whitespace-nowrap shadow-brutal-sm';
       } else {
-        btn.className = 'cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800';
+        btn.className = 'cat-task-btn px-4 py-2 border-2 border-black bg-white text-black font-mono text-xs font-black uppercase whitespace-nowrap shadow-brutal-sm hover:bg-[#EAE8E3]';
       }
     });
     this.render();
@@ -565,10 +644,10 @@ class CCSECatalog {
     const icon = document.getElementById('toggle-all-answers-icon');
 
     if (this.showAllAnswers) {
-      if (btnText) btnText.textContent = 'Ocultar todas las respuestas';
+      if (btnText) btnText.textContent = 'OCULTAR TODAS LAS RESPUESTAS';
       if (icon) icon.setAttribute('data-lucide', 'eye-off');
     } else {
-      if (btnText) btnText.textContent = 'Mostrar todas las respuestas';
+      if (btnText) btnText.textContent = 'MOSTRAR TODAS LAS RESPUESTAS';
       if (icon) icon.setAttribute('data-lucide', 'eye');
     }
 
@@ -603,14 +682,14 @@ class CCSECatalog {
       });
     }
 
-    if (counter) counter.textContent = `${filtered.length} preguntas`;
+    if (counter) counter.textContent = `${filtered.length} ITEMS`;
 
     if (filtered.length === 0) {
       container.innerHTML = `
-        <div class="col-span-full p-12 text-center glass-panel rounded-3xl border border-slate-800">
-          <i data-lucide="search-x" class="w-12 h-12 text-slate-500 mx-auto mb-3"></i>
-          <p class="text-sm font-semibold text-slate-300">No se encontraron preguntas con los filtros seleccionados.</p>
-          <p class="text-xs text-slate-500 mt-1">Prueba a cambiar el término de búsqueda o seleccionar otra tarea.</p>
+        <div class="col-span-full p-12 text-center border-2 border-black bg-white shadow-brutal-lg font-mono">
+          <i data-lucide="search-x" class="w-12 h-12 text-black mx-auto mb-3"></i>
+          <p class="text-base font-black uppercase text-black">NO SE ENCONTRARON ELEMENTOS</p>
+          <p class="text-xs text-ink-muted mt-1">Prueba a modificar los términos del filtro o la tarea seleccionada.</p>
         </div>
       `;
       if (window.lucide) window.lucide.createIcons();
@@ -619,44 +698,44 @@ class CCSECatalog {
 
     container.innerHTML = filtered.map(q => {
       return `
-        <div class="glass-panel p-5 rounded-3xl border border-slate-800/80 flex flex-col justify-between hover:border-slate-700 transition">
+        <div class="border-2 border-black bg-white p-5 sm:p-6 flex flex-col justify-between shadow-brutal">
           <div>
-            <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center justify-between mb-3 border-b-2 border-black pb-2">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 text-xs font-mono font-bold bg-slate-800 text-brand-400 rounded-lg border border-slate-700">#${q.id}</span>
-                <span class="px-2 py-0.5 text-[11px] font-semibold bg-indigo-500/10 text-indigo-400 rounded-lg border border-indigo-500/20">Tarea ${q.tarea}</span>
+                <span class="px-2 py-0.5 text-xs font-mono font-black text-white bg-black">#${q.id}</span>
+                <span class="px-2 py-0.5 text-xs font-mono font-bold text-black border border-black bg-[#F4F4F0]">TAREA ${q.tarea}</span>
               </div>
-              <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">${q.tipo === 'verdadero_falso' ? 'V / F' : 'Opción Múltiple'}</span>
+              <span class="text-[10px] font-mono text-ink-muted uppercase font-black tracking-wider">${q.tipo === 'verdadero_falso' ? 'V / F' : 'OPCIÓN MÚLTIPLE'}</span>
             </div>
 
-            <h3 class="text-sm font-bold text-white mb-3">${q.pregunta}</h3>
+            <h3 class="text-base font-display uppercase tracking-tight text-black mb-4 leading-snug">${q.pregunta}</h3>
 
-            <div class="space-y-1.5 mb-4 text-xs">
+            <div class="space-y-2 mb-4 font-mono text-xs">
               ${Object.entries(q.opciones).map(([k, val]) => {
                 const isCorrect = k === q.respuesta_correcta;
                 const shouldHighlight = this.showAllAnswers && isCorrect;
                 return `
-                  <div class="p-2 rounded-xl flex items-center gap-2.5 ${
+                  <div class="p-2.5 border-2 border-black flex items-center gap-2.5 ${
                     shouldHighlight 
-                      ? 'bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 font-semibold' 
-                      : 'bg-slate-900/60 border border-slate-800/60 text-slate-300'
+                      ? 'bg-emerald-50 text-emerald-950 font-black' 
+                      : 'bg-[#F4F4F0] text-black font-semibold'
                   }">
-                    <span class="w-5 h-5 rounded flex items-center justify-center font-mono font-bold text-[10px] uppercase ${
-                      shouldHighlight ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-400'
+                    <span class="w-6 h-6 border border-black flex items-center justify-center font-mono font-black text-xs uppercase shrink-0 ${
+                      shouldHighlight ? 'bg-emerald-700 text-white' : 'bg-black text-white'
                     }">${k}</span>
-                    <span>${val}</span>
+                    <span class="leading-snug font-sans text-xs sm:text-sm font-bold uppercase">${val}</span>
                   </div>
                 `;
               }).join('')}
             </div>
           </div>
 
-          <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <button onclick="catalog.toggleSingleAnswer(${q.id})" class="text-slate-400 hover:text-brand-400 text-[11px] font-medium flex items-center gap-1">
+          <div class="pt-3 border-t-2 border-black flex items-center justify-between text-xs font-mono">
+            <button onclick="catalog.toggleSingleAnswer(${q.id})" class="px-3 py-1.5 border-2 border-black bg-white text-black font-black uppercase shadow-brutal-sm hover:bg-black hover:text-white transition flex items-center gap-1.5">
               <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-              <span>Ver Solución</span>
+              <span>SOLUCIÓN</span>
             </button>
-            <div id="cat-ans-${q.id}" class="hidden text-xs font-bold text-emerald-400">
+            <div id="cat-ans-${q.id}" class="hidden text-xs font-black text-emerald-950 bg-emerald-50 px-2.5 py-1 border-2 border-black">
               ${q.respuesta_correcta.toUpperCase()}) ${q.respuesta_correcta_texto}
             </div>
           </div>
@@ -711,7 +790,7 @@ class CCSEExamUI {
 
       if (this.remainingSeconds <= 0) {
         clearInterval(this.timerInterval);
-        alert('¡El tiempo del examen ha finalizado!');
+        alert('¡El tiempo límite del examen ha expirado!');
         this.finishExam();
       }
     }, 1000);
@@ -727,15 +806,15 @@ class CCSEExamUI {
       const isFlagged = !!exam.flagged[q.id];
       const isCurrent = idx === this.currentQuestionIdx;
 
-      let cls = 'w-full py-1.5 text-center text-xs font-mono font-bold rounded-lg border transition cursor-pointer ';
+      let cls = 'w-full py-1.5 text-center text-xs font-mono font-black border-2 border-black transition cursor-pointer ';
       if (isCurrent) {
-        cls += 'bg-brand-600 text-white border-brand-400 ring-2 ring-brand-500/50';
+        cls += 'bg-black text-white shadow-brutal-hazard';
       } else if (isFlagged) {
-        cls += 'bg-amber-500/20 text-amber-300 border-amber-500/40';
+        cls += 'bg-yellow-300 text-black shadow-brutal-sm';
       } else if (isAnswered) {
-        cls += 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40';
+        cls += 'bg-black text-white shadow-brutal-sm';
       } else {
-        cls += 'bg-slate-900 text-slate-400 border-slate-800 hover:bg-slate-800';
+        cls += 'bg-white text-black shadow-brutal-sm hover:bg-[#EAE8E3]';
       }
 
       return `<button onclick="examUI.jumpToQuestion(${idx})" class="${cls}">${idx + 1}</button>`;
@@ -751,19 +830,19 @@ class CCSEExamUI {
     const exam = window.app.examEngine.currentExam;
     const q = exam.questions[this.currentQuestionIdx];
 
-    document.getElementById('exam-q-number').textContent = `Pregunta ${this.currentQuestionIdx + 1} de 25`;
-    document.getElementById('exam-q-task').textContent = `Tarea ${q.tarea}: ${q.tarea_nombre}`;
+    document.getElementById('exam-q-number').textContent = `[ ${String(this.currentQuestionIdx + 1).padStart(2, '0')} / 25 ]`;
+    document.getElementById('exam-q-task').textContent = `TAREA ${q.tarea}: ${q.tarea_nombre}`;
     document.getElementById('exam-current-id-badge').textContent = `#${q.id}`;
-    document.getElementById('exam-current-task-badge').textContent = `Tarea ${q.tarea}`;
+    document.getElementById('exam-current-task-badge').textContent = `TAREA ${q.tarea}`;
     document.getElementById('exam-current-question-text').textContent = q.pregunta;
 
     // Flag button state
     const flagBtn = document.getElementById('exam-flag-btn');
     if (flagBtn) {
       if (exam.flagged[q.id]) {
-        flagBtn.className = 'px-3 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-semibold flex items-center gap-1.5 transition';
+        flagBtn.className = 'px-3 py-1.5 border-2 border-black bg-yellow-300 text-black font-mono text-xs font-black uppercase shadow-brutal-sm flex items-center gap-1.5';
       } else {
-        flagBtn.className = 'px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition';
+        flagBtn.className = 'px-3 py-1.5 border-2 border-black bg-white text-black font-mono text-xs font-black uppercase shadow-brutal-sm hover:bg-[#EAE8E3] flex items-center gap-1.5';
       }
     }
 
@@ -781,21 +860,21 @@ class CCSEExamUI {
       optionsContainer.innerHTML = Object.entries(q.opciones).map(([k, val]) => {
         const isSelected = selectedAns === k;
         return `
-          <button onclick="examUI.selectExamOption('${k}')" class="w-full p-4 rounded-2xl border text-left text-xs sm:text-sm font-medium flex items-center justify-between transition cursor-pointer ${
+          <button onclick="examUI.selectExamOption('${k}')" class="w-full p-4 border-2 border-black text-left font-mono text-xs sm:text-sm font-bold flex items-center justify-between transition cursor-pointer ${
             isSelected 
-              ? 'bg-brand-600/20 border-brand-500 text-white shadow-md' 
-              : 'bg-slate-900/60 hover:bg-slate-800/80 border-slate-800 text-slate-300'
+              ? 'bg-black text-white shadow-brutal font-black' 
+              : 'bg-[#F4F4F0] text-black hover:bg-[#EAE8E3] hover:shadow-brutal-sm'
           }">
             <div class="flex items-center gap-3">
-              <span class="w-7 h-7 rounded-lg font-mono font-bold text-xs flex items-center justify-center uppercase ${
-                isSelected ? 'bg-brand-500 text-white' : 'bg-slate-800 text-slate-400'
+              <span class="w-7 h-7 border border-black font-mono font-black text-xs flex items-center justify-center uppercase shrink-0 ${
+                isSelected ? 'bg-white text-black' : 'bg-black text-white'
               }">${k}</span>
-              <span>${val}</span>
+              <span class="leading-snug font-sans text-sm sm:text-base font-bold uppercase">${val}</span>
             </div>
-            <div class="w-5 h-5 rounded-full border flex items-center justify-center ${
-              isSelected ? 'border-brand-500 bg-brand-500 text-white' : 'border-slate-700'
+            <div class="w-5 h-5 border-2 border-black flex items-center justify-center shrink-0 ${
+              isSelected ? 'bg-white text-black' : 'bg-white'
             }">
-              ${isSelected ? '<i data-lucide="check" class="w-3 h-3"></i>' : ''}
+              ${isSelected ? '<i data-lucide="check" class="w-3.5 h-3.5"></i>' : ''}
             </div>
           </button>
         `;
@@ -844,9 +923,9 @@ class CCSEExamUI {
     const answeredCount = Object.keys(exam.userAnswers).length;
     const unanswered = 25 - answeredCount;
 
-    let msg = '¿Deseas entregar y finalizar el simulacro de examen?';
+    let msg = '¿Deseas finalizar y entregar el simulacro de examen?';
     if (unanswered > 0) {
-      msg = `Aún tienes ${unanswered} pregunta(s) sin responder. ¿Deseas entregar el examen de todas formas?`;
+      msg = `Quedan ${unanswered} pregunta(s) sin responder. ¿Deseas entregar el examen de todas formas?`;
     }
 
     if (confirm(msg)) {
@@ -862,29 +941,28 @@ class CCSEExamUI {
     document.getElementById('exam-results-screen').classList.remove('hidden');
 
     // Banner de resultado
-    const banner = document.getElementById('exam-result-banner');
     const badgeIcon = document.getElementById('exam-result-badge-icon');
     const tag = document.getElementById('exam-verdict-tag');
     const title = document.getElementById('exam-score-title');
     const feedback = document.getElementById('exam-feedback-text');
 
-    title.textContent = `${result.score} / 25 Aciertos (${result.percentage}%)`;
+    title.textContent = `${result.score} / 25 ACIERTOS (${result.percentage}%)`;
 
     if (result.isPassed) {
       tag.textContent = 'APTO (APROBADO)';
-      tag.className = 'text-xs uppercase font-extrabold tracking-widest px-3 py-1 rounded-full border mb-2 inline-block bg-emerald-500/20 text-emerald-300 border-emerald-500/40';
-      badgeIcon.className = 'w-20 h-20 rounded-3xl mx-auto flex items-center justify-center mb-4 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
-      badgeIcon.innerHTML = '<i data-lucide="award" class="w-10 h-10"></i>';
+      tag.className = 'font-mono text-xs font-black tracking-widest px-4 py-1.5 bg-emerald-700 text-white mb-3 inline-block border-2 border-black shadow-brutal-sm';
+      badgeIcon.className = 'w-16 h-16 bg-emerald-600 text-white border-2 border-black mx-auto flex items-center justify-center mb-4 shadow-brutal';
+      badgeIcon.innerHTML = '<i data-lucide="award" class="w-8 h-8"></i>';
       feedback.textContent = '¡Enhorabuena! Has superado el simulacro oficial CCSE con los estándares del Instituto Cervantes (mínimo 15/25 aciertos).';
       
       if (window.confetti) {
         window.confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
       }
     } else {
-      tag.textContent = 'NO APTO';
-      tag.className = 'text-xs uppercase font-extrabold tracking-widest px-3 py-1 rounded-full border mb-2 inline-block bg-rose-500/20 text-rose-300 border-rose-500/40';
-      badgeIcon.className = 'w-20 h-20 rounded-3xl mx-auto flex items-center justify-center mb-4 bg-rose-500/20 text-rose-400 border border-rose-500/40';
-      badgeIcon.innerHTML = '<i data-lucide="alert-triangle" class="w-10 h-10"></i>';
+      tag.textContent = 'NO APTO (SUSPENSO)';
+      tag.className = 'font-mono text-xs font-black tracking-widest px-4 py-1.5 bg-[#E61919] text-white mb-3 inline-block border-2 border-black shadow-brutal-sm';
+      badgeIcon.className = 'w-16 h-16 bg-[#E61919] text-white border-2 border-black mx-auto flex items-center justify-center mb-4 shadow-brutal';
+      badgeIcon.innerHTML = '<i data-lucide="alert-triangle" class="w-8 h-8"></i>';
       feedback.textContent = 'No has alcanzado los 15 aciertos mínimos necesarios. Te recomendamos practicar las preguntas falladas en el Modo Anki.';
     }
 
@@ -892,10 +970,11 @@ class CCSEExamUI {
     const breakdownContainer = document.getElementById('exam-task-breakdown');
     if (breakdownContainer) {
       breakdownContainer.innerHTML = Object.entries(result.taskBreakdown).map(([t, data]) => {
+        const isPass = data.correct >= Math.ceil(data.total * 0.6);
         return `
-          <div class="p-3 bg-slate-900 rounded-2xl border border-slate-800 text-center">
-            <span class="text-[11px] text-slate-400 block mb-1">Tarea ${t}</span>
-            <strong class="text-base font-mono font-bold ${data.correct >= Math.ceil(data.total * 0.6) ? 'text-emerald-400' : 'text-rose-400'}">
+          <div class="p-3 border-2 border-black ${isPass ? 'bg-emerald-50' : 'bg-red-50'} text-center font-mono">
+            <span class="text-[10px] font-black text-black uppercase block mb-1">TAREA ${t}</span>
+            <strong class="text-base font-black ${isPass ? 'text-emerald-950' : 'text-red-950'}">
               ${data.correct}/${data.total}
             </strong>
           </div>
@@ -909,17 +988,17 @@ class CCSEExamUI {
       reviewList.innerHTML = result.details.map(d => {
         const q = d.question;
         return `
-          <div class="p-4 rounded-2xl border ${d.isCorrect ? 'bg-emerald-950/20 border-emerald-500/30' : 'bg-rose-950/20 border-rose-500/30'}">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-mono font-bold text-slate-300">#${d.number}. [ID ${q.id}] Tarea ${q.tarea}</span>
-              <span class="text-xs font-bold px-2 py-0.5 rounded ${d.isCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-rose-500/20 text-rose-400'}">
-                ${d.isCorrect ? 'Acierto' : 'Fallo'}
+          <div class="p-4 border-2 border-black ${d.isCorrect ? 'bg-emerald-50' : 'bg-red-50'}">
+            <div class="flex items-center justify-between mb-2 font-mono">
+              <span class="text-xs font-black text-black">#${d.number}. [REF: ${q.id}] TAREA ${q.tarea}</span>
+              <span class="text-[10px] font-black uppercase px-2 py-0.5 border border-black ${d.isCorrect ? 'bg-emerald-600 text-white' : 'bg-[#E61919] text-white'}">
+                ${d.isCorrect ? 'ACIERTO' : 'FALLO'}
               </span>
             </div>
-            <p class="text-xs font-semibold text-white mb-2">${q.pregunta}</p>
-            <div class="text-xs space-y-1 text-slate-300">
-              <div>Tu respuesta: <strong class="${d.isCorrect ? 'text-emerald-400' : 'text-rose-400'}">${d.userAnswer ? d.userAnswer.toUpperCase() + ') ' + (q.opciones[d.userAnswer] || '') : 'Sin responder'}</strong></div>
-              ${!d.isCorrect ? `<div class="text-emerald-400 font-semibold">Respuesta correcta: ${q.respuesta_correcta.toUpperCase()}) ${q.respuesta_correcta_texto}</div>` : ''}
+            <p class="text-sm font-display uppercase tracking-tight text-black mb-2">${q.pregunta}</p>
+            <div class="text-xs font-mono space-y-1 text-black">
+              <div>TU RESPUESTA: <strong class="${d.isCorrect ? 'text-emerald-800' : 'text-red-800'}">${d.userAnswer ? d.userAnswer.toUpperCase() + ') ' + (q.opciones[d.userAnswer] || '') : 'SIN RESPONDER'}</strong></div>
+              ${!d.isCorrect ? `<div class="text-emerald-900 font-black">RESPUESTA CORRECTA: ${q.respuesta_correcta.toUpperCase()}) ${q.respuesta_correcta_texto}</div>` : ''}
             </div>
           </div>
         `;

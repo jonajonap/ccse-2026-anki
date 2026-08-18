@@ -16,6 +16,8 @@ __pycache__/
 # IDEs y editores
 .vscode/
 .idea/
+.agents
+.AGENTS.md
 *.swp
 *.swo
 
