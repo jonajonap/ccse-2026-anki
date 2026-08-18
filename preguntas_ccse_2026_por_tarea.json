@@ -1,0 +1,4206 @@
+{
+  "1": {
+    "tarea": 1,
+    "nombre": "Gobierno, legislación y participación ciudadana",
+    "tipo": "opcion_multiple",
+    "total_preguntas": 120,
+    "preguntas": [
+      {
+        "id": 1001,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "España es…",
+        "opciones": {
+          "a": "una monarquía parlamentaria.",
+          "b": "una república federal.",
+          "c": "una monarquía federal."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "una monarquía parlamentaria."
+      },
+      {
+        "id": 1002,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La ley fundamental de España se llama…",
+        "opciones": {
+          "a": "Constitución.",
+          "b": "Ley básica.",
+          "c": "Ordenamiento esencial."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Constitución."
+      },
+      {
+        "id": 1003,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Según la Constitución española, la soberanía nacional reside en…",
+        "opciones": {
+          "a": "el pueblo español.",
+          "b": "el Gobierno del Estado.",
+          "c": "el Congreso de los Diputados."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el pueblo español."
+      },
+      {
+        "id": 1004,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Instituto de las Mujeres es…",
+        "opciones": {
+          "a": "una institución europea.",
+          "b": "un organismo español.",
+          "c": "una ONG."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "un organismo español."
+      },
+      {
+        "id": 1005,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuándo puedo hacer los trámites en la sede electrónica?",
+        "opciones": {
+          "a": "En cualquier horario.",
+          "b": "Únicamente por la mañana.",
+          "c": "De lunes a viernes."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En cualquier horario."
+      },
+      {
+        "id": 1006,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El castellano o español es lengua oficial…",
+        "opciones": {
+          "a": "en toda España.",
+          "b": "solo donde no hay otras lenguas.",
+          "c": "en toda la península ibérica."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "en toda España."
+      },
+      {
+        "id": 1007,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estas fuerzas de seguridad es de ámbito autonómico?",
+        "opciones": {
+          "a": "Policía local.",
+          "b": "Guardia Civil.",
+          "c": "Policía Foral de Navarra."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Policía Foral de Navarra."
+      },
+      {
+        "id": 1008,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué fuerza de seguridad está en toda España?",
+        "opciones": {
+          "a": "La Policía Foral de Navarra.",
+          "b": "El Cuerpo Nacional de Policía.",
+          "c": "Los Mossos d’Esquadra."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Cuerpo Nacional de Policía."
+      },
+      {
+        "id": 1009,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "En la Constitución se establece la separación de poderes: el poder ejecutivo, el legislativo y el…",
+        "opciones": {
+          "a": "judicial.",
+          "b": "informativo.",
+          "c": "político."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "judicial."
+      },
+      {
+        "id": 1010,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La bandera de España debe utilizarse…",
+        "opciones": {
+          "a": "solo los días de fiesta oficial.",
+          "b": "en todos los edificios públicos.",
+          "c": "solo en actos del Gobierno español."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "en todos los edificios públicos."
+      },
+      {
+        "id": 1011,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién es el jefe del Estado en España?",
+        "opciones": {
+          "a": "El presidente del Gobierno.",
+          "b": "El rey.",
+          "c": "El ministro de Economía."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El rey."
+      },
+      {
+        "id": 1012,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La gestión de la sanidad es competencia de…",
+        "opciones": {
+          "a": "el Estado.",
+          "b": "las comunidades autónomas.",
+          "c": "los ayuntamientos."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "las comunidades autónomas."
+      },
+      {
+        "id": 1013,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién fue el primer presidente del Gobierno de España en democracia?",
+        "opciones": {
+          "a": "Mariano Rajoy.",
+          "b": "Adolfo Suárez.",
+          "c": "José Luis Rodríguez Zapatero."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Adolfo Suárez."
+      },
+      {
+        "id": 1014,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos organismos se encarga de interpretar la Constitución?",
+        "opciones": {
+          "a": "El Poder Constitucional.",
+          "b": "El Tribunal Constitucional.",
+          "c": "El Consejo General del Poder Judicial."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Tribunal Constitucional."
+      },
+      {
+        "id": 1015,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién modera el funcionamiento de las instituciones españolas?",
+        "opciones": {
+          "a": "El presidente del Gobierno.",
+          "b": "El rey.",
+          "c": "El director de la Real Academia Española."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El rey."
+      },
+      {
+        "id": 1016,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la cámara de representación territorial en España?",
+        "opciones": {
+          "a": "Senado.",
+          "b": "Diputación permanente.",
+          "c": "Congreso de los Diputados."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Senado."
+      },
+      {
+        "id": 1017,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué se necesita para hacer trámites por internet con la Administración?",
+        "opciones": {
+          "a": "Un pasaporte válido.",
+          "b": "Una firma electrónica.",
+          "c": "Una firma en papel."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Una firma electrónica."
+      },
+      {
+        "id": 1018,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se aprobó la Constitución?",
+        "opciones": {
+          "a": "Por imposición legal.",
+          "b": "Por referéndum.",
+          "c": "Por el Tribunal Constitucional."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Por referéndum."
+      },
+      {
+        "id": 1019,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la ley más importante de cada comunidad autónoma?",
+        "opciones": {
+          "a": "Estatuto de Autonomía.",
+          "b": "Normativa autonómica.",
+          "c": "Ley de la comunidad."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Estatuto de Autonomía."
+      },
+      {
+        "id": 1020,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las instalaciones culturales y deportivas públicas son competencia del…",
+        "opciones": {
+          "a": "Ayuntamiento.",
+          "b": "Ministerio de Educación, Formación Profesional y Deportes.",
+          "c": "Ministerio de Igualdad."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Ayuntamiento."
+      },
+      {
+        "id": 1021,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién dirige la administración militar de España?",
+        "opciones": {
+          "a": "Los ayuntamientos.",
+          "b": "El Gobierno.",
+          "c": "Las Cortes Generales."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Gobierno."
+      },
+      {
+        "id": 1022,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué hay en las Islas Baleares, en vez de diputaciones?",
+        "opciones": {
+          "a": "Cabildos.",
+          "b": "Consejos insulares.",
+          "c": "Centros de diputados."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Consejos insulares."
+      },
+      {
+        "id": 1023,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué ciudad tiene más habitantes?",
+        "opciones": {
+          "a": "Sevilla.",
+          "b": "Barcelona.",
+          "c": "Zaragoza."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Barcelona."
+      },
+      {
+        "id": 1024,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las Cortes Generales representan…",
+        "opciones": {
+          "a": "al pueblo español.",
+          "b": "a los partidos políticos.",
+          "c": "a los ministros."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "al pueblo español."
+      },
+      {
+        "id": 1025,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Congreso de los Diputados y el Senado constituyen el poder…",
+        "opciones": {
+          "a": "ejecutivo.",
+          "b": "legislativo.",
+          "c": "judicial."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "legislativo."
+      },
+      {
+        "id": 1026,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo pueden los ciudadanos proponer nuevas leyes al Congreso?",
+        "opciones": {
+          "a": "Reuniendo 500 000 firmas.",
+          "b": "Solicitándolo al rey.",
+          "c": "Creando una asociación."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Reuniendo 500 000 firmas."
+      },
+      {
+        "id": 1027,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántas comunidades autónomas hay en España?",
+        "opciones": {
+          "a": "8.",
+          "b": "17.",
+          "c": "25."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "17."
+      },
+      {
+        "id": 1028,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los colores de la bandera española son…",
+        "opciones": {
+          "a": "blanco y rojo.",
+          "b": "rojo y amarillo.",
+          "c": "amarillo y blanco."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "rojo y amarillo."
+      },
+      {
+        "id": 1029,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde está la sede del Gobierno de España?",
+        "opciones": {
+          "a": "En Madrid.",
+          "b": "En Barcelona.",
+          "c": "En Sevilla."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En Madrid."
+      },
+      {
+        "id": 1030,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La bandera azul con 12 estrellas amarillas en círculo es la bandera de…",
+        "opciones": {
+          "a": "la Unión Europea.",
+          "b": "el Parlamento Europeo.",
+          "c": "la Comisión de Europa."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "la Unión Europea."
+      },
+      {
+        "id": 1031,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "En las elecciones municiales se vota a…",
+        "opciones": {
+          "a": "alcaldes y concejales",
+          "b": "ministros y ministras.",
+          "c": "diputados y senadores."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "alcaldes y concejales"
+      },
+      {
+        "id": 1032,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué lengua es oficial en el País Vasco?",
+        "opciones": {
+          "a": "El bable.",
+          "b": "El aragonés.",
+          "c": "El euskera."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El euskera."
+      },
+      {
+        "id": 1033,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Todos los españoles tienen el deber de conocer la lengua…",
+        "opciones": {
+          "a": "autonómica del Estado.",
+          "b": "oficial del Estado.",
+          "c": "local del Estado."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "oficial del Estado."
+      },
+      {
+        "id": 1034,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El aranés es una lengua cooficial que se habla en un pequeño territorio de…",
+        "opciones": {
+          "a": "Cataluña.",
+          "b": "La Rioja.",
+          "c": "Aragón."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Cataluña."
+      },
+      {
+        "id": 1035,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las instituciones de una comunidad autónoma son: el consejo de gobierno, el presidente y…",
+        "opciones": {
+          "a": "el ayuntamiento.",
+          "b": "la asamblea legislativa.",
+          "c": "la delegación de gobierno."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "la asamblea legislativa."
+      },
+      {
+        "id": 1036,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estas opciones es una lengua cooficial en alguna comunidad autónoma?",
+        "opciones": {
+          "a": "El gallego.",
+          "b": "El aragonés.",
+          "c": "El murciano."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El gallego."
+      },
+      {
+        "id": 1037,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué institución tiene como fin la promoción de la enseñanza de la lengua española y la difusión de la cultura en español?",
+        "opciones": {
+          "a": "El Instituto Nacional de Administración Pública.",
+          "b": "El Instituto Nacional de Estadística.",
+          "c": "El Instituto Cervantes."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El Instituto Cervantes."
+      },
+      {
+        "id": 1038,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de los siguientes organismos trabaja para conseguir la normalización lingüística?",
+        "opciones": {
+          "a": "El Institut Ramon Llull.",
+          "b": "El Instituto Cervantes.",
+          "c": "La Real Academia Española."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "La Real Academia Española."
+      },
+      {
+        "id": 1039,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde vive el presidente del Gobierno?",
+        "opciones": {
+          "a": "En el Palacio Real.",
+          "b": "En el Palacio de la Zarzuela.",
+          "c": "En el Palacio de la Moncloa."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "En el Palacio de la Moncloa."
+      },
+      {
+        "id": 1040,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de los siguientes cuerpos forma parte de las Fuerzas Armadas de España?",
+        "opciones": {
+          "a": "La Policía Foral.",
+          "b": "La Guardia Civil.",
+          "c": "El Ejército del Aire."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El Ejército del Aire."
+      },
+      {
+        "id": 1041,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quiénes forman parte del Gobierno?",
+        "opciones": {
+          "a": "Los ministros.",
+          "b": "Los concejales.",
+          "c": "Los alcaldes."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Los ministros."
+      },
+      {
+        "id": 1042,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "España es un…",
+        "opciones": {
+          "a": "estado social y democrático de Derecho.",
+          "b": "estado libre asociado.",
+          "c": "estado confederado."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "estado social y democrático de Derecho."
+      },
+      {
+        "id": 1043,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de las siguientes siglas corresponde a un partido político?",
+        "opciones": {
+          "a": "PP.",
+          "b": "PIB.",
+          "c": "UE."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "PP."
+      },
+      {
+        "id": 1044,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué título tiene la futura reina, hija del rey?",
+        "opciones": {
+          "a": "Princesa de Asturias.",
+          "b": "Princesa de Aragón.",
+          "c": "Duquesa de Alba."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Princesa de Asturias."
+      },
+      {
+        "id": 1045,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Con qué rey se restaura la democracia en España después del régimen de Franco?",
+        "opciones": {
+          "a": "Con Carlos III.",
+          "b": "Con Alfonso XIII.",
+          "c": "Con Juan Carlos I."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Con Juan Carlos I."
+      },
+      {
+        "id": 1046,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué año se aprobó la Constitución española?",
+        "opciones": {
+          "a": "En 1957.",
+          "b": "En 1978.",
+          "c": "En 2001."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En 1978."
+      },
+      {
+        "id": 1047,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántas comunidades autónomas tienen su propia bandera?",
+        "opciones": {
+          "a": "Ninguna.",
+          "b": "Todas.",
+          "c": "Las que tienen una lengua cooficial."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Todas."
+      },
+      {
+        "id": 1048,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué organismo oficial atiende las quejas de los ciudadanos por el mal funcionamiento de las administraciones?",
+        "opciones": {
+          "a": "La Oficina de Atención al Consumidor.",
+          "b": "La Policía Nacional.",
+          "c": "El Defensor del Pueblo."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El Defensor del Pueblo."
+      },
+      {
+        "id": 1049,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántas firmas, como mínimo, deben recoger los ciudadanos para poder presentar una proposición de ley?",
+        "opciones": {
+          "a": "250 000.",
+          "b": "100 000.",
+          "c": "500 000."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "500 000."
+      },
+      {
+        "id": 1050,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿A cuál de las siguientes organizaciones internacionales pertenece España?",
+        "opciones": {
+          "a": "Comunidad de Estados Independientes (CEI).",
+          "b": "Fondo Monetario Internacional (FMI).",
+          "c": "Unión Económica Euroasiática (UEE)."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Fondo Monetario Internacional (FMI)."
+      },
+      {
+        "id": 1051,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "En la organización de la Administración se distinguen tres niveles: central, autonómica y…",
+        "opciones": {
+          "a": "estatal.",
+          "b": "regional.",
+          "c": "local."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "local."
+      },
+      {
+        "id": 1052,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El poder legislativo corresponde...",
+        "opciones": {
+          "a": "al presidente y los ministros.",
+          "b": "a los jueces y magistrados.",
+          "c": "a los diputados y senadores."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "a los diputados y senadores."
+      },
+      {
+        "id": 1053,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde vive el rey?",
+        "opciones": {
+          "a": "En el Palacio de la Moneda.",
+          "b": "En el Palacio de la Zarzuela.",
+          "c": "En el Palacio de la Moncloa."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En el Palacio de la Zarzuela."
+      },
+      {
+        "id": 1054,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El nombre oficial del parlamento español es…",
+        "opciones": {
+          "a": "Cortes Generales.",
+          "b": "Congreso de los Diputados.",
+          "c": "Senado."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Cortes Generales."
+      },
+      {
+        "id": 1055,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Instituto de Comercio Exterior de España, el Instituto de las Mujeres y la Dirección General de Tráfico…",
+        "opciones": {
+          "a": "son organismos autónomos.",
+          "b": "dependen de ministerios.",
+          "c": "son organismos internacionales."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "dependen de ministerios."
+      },
+      {
+        "id": 1056,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién puede reinar en España?",
+        "opciones": {
+          "a": "Solo los hombres.",
+          "b": "Solo las mujeres.",
+          "c": "Tanto los hombres como las mujeres."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Tanto los hombres como las mujeres."
+      },
+      {
+        "id": 1057,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Tribunal de Cuentas depende de…",
+        "opciones": {
+          "a": "la Presidencia del Gobierno.",
+          "b": "las Cortes Generales.",
+          "c": "el Ministerio de Hacienda."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "las Cortes Generales."
+      },
+      {
+        "id": 1058,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién es la tercera autoridad del Estado, después del rey y el presidente del Gobierno?",
+        "opciones": {
+          "a": "El presidente del Senado.",
+          "b": "El ministro de Economía.",
+          "c": "El presidente del Congreso de los Diputados."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El presidente del Congreso de los Diputados."
+      },
+      {
+        "id": 1059,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué lengua cooficial se habla en las Islas Baleares?",
+        "opciones": {
+          "a": "Gallego.",
+          "b": "Catalán.",
+          "c": "Euskera."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Catalán."
+      },
+      {
+        "id": 1060,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La Constitución defiende valores tales como la libertad, la igualdad, el pluralismo político y…",
+        "opciones": {
+          "a": "la justicia.",
+          "b": "la solidaridad.",
+          "c": "la fraternidad."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "la justicia."
+      },
+      {
+        "id": 1061,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Cuando una ley ya está aprobada, ¿qué necesita para poder aplicarse?",
+        "opciones": {
+          "a": "Nada.",
+          "b": "Normas que la desarrollen.",
+          "c": "Ser revisada por el Parlamento."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Normas que la desarrollen."
+      },
+      {
+        "id": 1062,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántos habitantes hay en España?",
+        "opciones": {
+          "a": "95 millones.",
+          "b": "49 millones.",
+          "c": "67 millones."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "49 millones."
+      },
+      {
+        "id": 1063,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos es un órgano consultivo del Gobierno de España?",
+        "opciones": {
+          "a": "El Parlamento Europeo.",
+          "b": "El Consejo de Estado.",
+          "c": "El Tribunal Constitucional."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Consejo de Estado."
+      },
+      {
+        "id": 1064,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién dirige la política interior y exterior de España?",
+        "opciones": {
+          "a": "El rey.",
+          "b": "El Gobierno.",
+          "c": "El Congreso de los Diputados."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Gobierno."
+      },
+      {
+        "id": 1065,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Defensor del Pueblo depende de…",
+        "opciones": {
+          "a": "el Consejo de Ministros.",
+          "b": "el Tribunal de Cuentas.",
+          "c": "las Cortes Generales."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "las Cortes Generales."
+      },
+      {
+        "id": 1066,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Instituto Etxepare tiene como misión la difusión del…",
+        "opciones": {
+          "a": "euskera y la cultura vasca.",
+          "b": "bable y la cultura cántabra.",
+          "c": "gallego y la cultura galaica."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "euskera y la cultura vasca."
+      },
+      {
+        "id": 1067,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estas ciudades se encuentra entre las 10 más pobladas de España?",
+        "opciones": {
+          "a": "Cádiz.",
+          "b": "Málaga.",
+          "c": "Albacete."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Málaga."
+      },
+      {
+        "id": 1068,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién puede realizar trámites en línea ante la Administración Pública?",
+        "opciones": {
+          "a": "Jueces y magistrados.",
+          "b": "Cualquier ciudadano.",
+          "c": "Abogados colegiados."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Cualquier ciudadano."
+      },
+      {
+        "id": 1069,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama el rey de España?",
+        "opciones": {
+          "a": "Juan Carlos I.",
+          "b": "Felipe VI.",
+          "c": "Alfonso XIII."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Felipe VI."
+      },
+      {
+        "id": 1070,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama el órgano de gobierno de los jueces y magistrados?",
+        "opciones": {
+          "a": "Tribunal Supremo.",
+          "b": "Consejo General del Poder Judicial.",
+          "c": "Consejo de Estado."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Consejo General del Poder Judicial."
+      },
+      {
+        "id": 1071,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién aprueba los presupuestos generales del Estado?",
+        "opciones": {
+          "a": "Las Cortes Generales.",
+          "b": "El Tribunal de Cuentas.",
+          "c": "El Gobierno de España."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Las Cortes Generales."
+      },
+      {
+        "id": 1072,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La Constitución española es…",
+        "opciones": {
+          "a": "la ley fundamental.",
+          "b": "parte de otra ley.",
+          "c": "una ley secundaria."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "la ley fundamental."
+      },
+      {
+        "id": 1073,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las Cortes Generales están compuestas por el Senado y…",
+        "opciones": {
+          "a": "el Congreso de los Diputados.",
+          "b": "el Tribunal Supremo.",
+          "c": "el Consejo de Estado."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el Congreso de los Diputados."
+      },
+      {
+        "id": 1074,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién elabora las leyes?",
+        "opciones": {
+          "a": "El poder ejecutivo.",
+          "b": "El poder legislativo.",
+          "c": "El poder judicial."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El poder legislativo."
+      },
+      {
+        "id": 1075,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La defensa de la integridad territorial de España corresponde a…",
+        "opciones": {
+          "a": "la Policía Nacional y la Guardia Civil.",
+          "b": "las Fuerzas Armadas.",
+          "c": "la Policía Nacional y las policías autonómicas."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "las Fuerzas Armadas."
+      },
+      {
+        "id": 1076,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Ejército español participa desde 1989 en misiones de paz de la…",
+        "opciones": {
+          "a": "Organización de Estados Iberoamericanos (OEI).",
+          "b": "Unión Europea Occidental (UEO).",
+          "c": "Organización de las Naciones Unidas (ONU)."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Organización de las Naciones Unidas (ONU)."
+      },
+      {
+        "id": 1077,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién vigila puertos y aeropuertos, fronteras y costas?",
+        "opciones": {
+          "a": "La Guardia Civil.",
+          "b": "La Policía local.",
+          "c": "La Policía Nacional."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "La Guardia Civil."
+      },
+      {
+        "id": 1078,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién hace el control de pasaportes en las fronteras de España?",
+        "opciones": {
+          "a": "La Guardia Civil.",
+          "b": "La Policía local.",
+          "c": "La Policía Nacional."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "La Policía Nacional."
+      },
+      {
+        "id": 1079,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de los siguientes políticos ha sido presidente del Gobierno en España?",
+        "opciones": {
+          "a": "Manuel Fraga.",
+          "b": "José María Aznar.",
+          "c": "Yolanda Díaz."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "José María Aznar."
+      },
+      {
+        "id": 1080,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la policía autonómica de Cataluña?",
+        "opciones": {
+          "a": "Guardia Civil.",
+          "b": "Ertzaintza.",
+          "c": "Mossos d'Esquadra."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Mossos d'Esquadra."
+      },
+      {
+        "id": 1081,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la policía autonómica del País Vasco?",
+        "opciones": {
+          "a": "Ertzaintza.",
+          "b": "Guardia Civil.",
+          "c": "Mossos d'Esquadra."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Ertzaintza."
+      },
+      {
+        "id": 1082,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Desde qué año es rey Felipe VI?",
+        "opciones": {
+          "a": "Desde 1975.",
+          "b": "Desde 2014.",
+          "c": "Desde 2020."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Desde 2014."
+      },
+      {
+        "id": 1083,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién regula el tráfico en los pueblos y ciudades?",
+        "opciones": {
+          "a": "La Guardia Civil.",
+          "b": "Protección Civil.",
+          "c": "La Policía Local."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "La Policía Local."
+      },
+      {
+        "id": 1084,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién puede presentar una queja al Defensor del Pueblo?",
+        "opciones": {
+          "a": "Solo los ciudadanos legalmente residentes.",
+          "b": "Solo los españoles mayores de 18 años.",
+          "c": "Todos los ciudadanos, españoles o extranjeros."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Todos los ciudadanos, españoles o extranjeros."
+      },
+      {
+        "id": 1085,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "En España el voto en las elecciones es…",
+        "opciones": {
+          "a": "un derecho.",
+          "b": "un deber.",
+          "c": "una obligación."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "un derecho."
+      },
+      {
+        "id": 1086,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién vigila el tráfico en las carreteras?",
+        "opciones": {
+          "a": "La Guardia Civil.",
+          "b": "La Policía Nacional.",
+          "c": "El Ejército de Tierra."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "La Guardia Civil."
+      },
+      {
+        "id": 1087,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué organismo se encarga de recaudar los impuestos?",
+        "opciones": {
+          "a": "El Tribunal de Cuentas.",
+          "b": "La Agencia Tributaria.",
+          "c": "El Consejo Económico y Social."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "La Agencia Tributaria."
+      },
+      {
+        "id": 1088,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde se publican las leyes nacionales?",
+        "opciones": {
+          "a": "En el boletín del Instituto Nacional de Estadística (INE).",
+          "b": "En el Portal de la Administración Electrónica (PAe).",
+          "c": "En el Boletín Oficial del Estado (BOE)."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "En el Boletín Oficial del Estado (BOE)."
+      },
+      {
+        "id": 1089,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llaman los órganos de gobierno que solo existen en Canarias?",
+        "opciones": {
+          "a": "Cabildos.",
+          "b": "Consejos insulares.",
+          "c": "Diputaciones."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Cabildos."
+      },
+      {
+        "id": 1090,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos trámites administrativos puede realizarse en la sede electrónica?",
+        "opciones": {
+          "a": "Tramitar el DNI.",
+          "b": "Renovar el pasaporte.",
+          "c": "Pagar los impuestos."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Pagar los impuestos."
+      },
+      {
+        "id": 1091,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el número de teléfono de información de la Administración General del Estado?",
+        "opciones": {
+          "a": "010.",
+          "b": "060.",
+          "c": "091."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "060."
+      },
+      {
+        "id": 1092,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "España está organizada en…",
+        "opciones": {
+          "a": "cantones.",
+          "b": "comunidades autónomas.",
+          "c": "estados federales."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "comunidades autónomas."
+      },
+      {
+        "id": 1093,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántos partidos políticos hay en España?",
+        "opciones": {
+          "a": "Ninguno.",
+          "b": "Uno.",
+          "c": "Muchos."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Muchos."
+      },
+      {
+        "id": 1094,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde tiene lugar la investidura del presidente del Gobierno?",
+        "opciones": {
+          "a": "En el Palacio de la Moncloa.",
+          "b": "En el Congreso de los Diputados.",
+          "c": "En el Senado."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En el Congreso de los Diputados."
+      },
+      {
+        "id": 1095,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién tiene el mando supremo de las Fuerzas Armadas?",
+        "opciones": {
+          "a": "El rey.",
+          "b": "El presidente del Gobierno.",
+          "c": "El ministro de Defensa."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El rey."
+      },
+      {
+        "id": 1096,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién es el representante del Estado en una comunidad autónoma?",
+        "opciones": {
+          "a": "El presidente de la comunidad autónoma.",
+          "b": "El delegado del Gobierno.",
+          "c": "El presidente de la Asamblea autonómica."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El delegado del Gobierno."
+      },
+      {
+        "id": 1097,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántas provincias hay en España?",
+        "opciones": {
+          "a": "45.",
+          "b": "50.",
+          "c": "55."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "50."
+      },
+      {
+        "id": 1098,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La enseñanza de las lenguas cooficiales es competencia…",
+        "opciones": {
+          "a": "del Estado.",
+          "b": "de la comunidad autónoma.",
+          "c": "de la provincia."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "de la comunidad autónoma."
+      },
+      {
+        "id": 1099,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El poder ejecutivo corresponde…",
+        "opciones": {
+          "a": "al Gobierno del Estado.",
+          "b": "al Congreso y al Senado.",
+          "c": "a los jueces y magistrados."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "al Gobierno del Estado."
+      },
+      {
+        "id": 1100,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántas cámaras hay en el Parlamento español?",
+        "opciones": {
+          "a": "Una.",
+          "b": "Dos.",
+          "c": "Tres."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Dos."
+      },
+      {
+        "id": 1101,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El suministro de agua y el alumbrado de las ciudades es competencia de…",
+        "opciones": {
+          "a": "el ayuntamiento.",
+          "b": "el Gobierno autonómico.",
+          "c": "el Ministerio de Obras Públicas y Urbanismo."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el ayuntamiento."
+      },
+      {
+        "id": 1102,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "En materias como nacionalidad, inmigración, emigración o extranjería solo tiene competencia…",
+        "opciones": {
+          "a": "el Estado.",
+          "b": "las comunidades autónomas.",
+          "c": "los ayuntamientos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el Estado."
+      },
+      {
+        "id": 1103,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántas mujeres han sido presidentas de Gobierno en España?",
+        "opciones": {
+          "a": "Ninguna.",
+          "b": "Una.",
+          "c": "Dos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Ninguna."
+      },
+      {
+        "id": 1104,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las relaciones internacionales son competencia de…",
+        "opciones": {
+          "a": "el Estado.",
+          "b": "las comunidades autónomas.",
+          "c": "los ayuntamientos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el Estado."
+      },
+      {
+        "id": 1105,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Ayuntamiento está formado por el alcalde y…",
+        "opciones": {
+          "a": "los concejales.",
+          "b": "los diputados.",
+          "c": "los senadores."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "los concejales."
+      },
+      {
+        "id": 1106,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quiénes forman el gobierno de las comunidades autónomas?",
+        "opciones": {
+          "a": "El presidente y los ministros.",
+          "b": "El alcalde y los concejales.",
+          "c": "El presidente y los consejeros."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El presidente y los consejeros."
+      },
+      {
+        "id": 1107,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el órgano de gobierno en los municipios?",
+        "opciones": {
+          "a": "El ayuntamiento.",
+          "b": "La diputación.",
+          "c": "El cabildo."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El ayuntamiento."
+      },
+      {
+        "id": 1108,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llaman los órganos de gobierno de las provincias españolas?",
+        "opciones": {
+          "a": "Cabildos.",
+          "b": "Consejos insulares.",
+          "c": "Diputaciones."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Diputaciones."
+      },
+      {
+        "id": 1109,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el órgano superior del poder ejecutivo?",
+        "opciones": {
+          "a": "El Gobierno.",
+          "b": "Las Fuerzas Armadas.",
+          "c": "Las Cortes Generales."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El Gobierno."
+      },
+      {
+        "id": 1110,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "El idioma español también se llama…",
+        "opciones": {
+          "a": "aragonés.",
+          "b": "castellano.",
+          "c": "leonés."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "castellano."
+      },
+      {
+        "id": 1111,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿A quiénes se elige en las elecciones al Parlamento Europeo?",
+        "opciones": {
+          "a": "A los ministros europeos.",
+          "b": "A los consejeros delegados.",
+          "c": "A los eurodiputados."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "A los eurodiputados."
+      },
+      {
+        "id": 1112,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los españoles pueden votar a partir de los…",
+        "opciones": {
+          "a": "16 años.",
+          "b": "18 años.",
+          "c": "21 años."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "18 años."
+      },
+      {
+        "id": 1113,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Algunos ciudadanos extranjeros pueden votar en las elecciones…",
+        "opciones": {
+          "a": "municipales.",
+          "b": "autonómicas.",
+          "c": "generales."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "municipales."
+      },
+      {
+        "id": 1114,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién controla la gestión financiera del Estado?",
+        "opciones": {
+          "a": "El Banco de España.",
+          "b": "La Agencia Tributaria.",
+          "c": "El Tribunal de Cuentas."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "El Tribunal de Cuentas."
+      },
+      {
+        "id": 1115,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿A quiénes se elige en las elecciones generales?",
+        "opciones": {
+          "a": "A los senadores y diputados.",
+          "b": "A los eurodiputados.",
+          "c": "A los concejales."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "A los senadores y diputados."
+      },
+      {
+        "id": 1116,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuántos miembros tiene el Congreso de los Diputados?",
+        "opciones": {
+          "a": "300.",
+          "b": "350.",
+          "c": "400."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "350."
+      },
+      {
+        "id": 1117,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los municipios y provincias forman parte de la Administración…",
+        "opciones": {
+          "a": "autonómica.",
+          "b": "local.",
+          "c": "central."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "local."
+      },
+      {
+        "id": 1118,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "La comunidad autónoma más poblada de España es…",
+        "opciones": {
+          "a": "Andalucía.",
+          "b": "Cataluña.",
+          "c": "Castilla y León."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Andalucía."
+      },
+      {
+        "id": 1119,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la organización que defiende los intereses de los trabajadores?",
+        "opciones": {
+          "a": "Asociación.",
+          "b": "Partido.",
+          "c": "Sindicato."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Sindicato."
+      },
+      {
+        "id": 1120,
+        "tarea": 1,
+        "tarea_nombre": "Gobierno, legislación y participación ciudadana",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién elige al presidente del Gobierno?",
+        "opciones": {
+          "a": "El Congreso de los Diputados.",
+          "b": "El rey.",
+          "c": "El Tribunal Supremo."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El Congreso de los Diputados."
+      }
+    ]
+  },
+  "2": {
+    "tarea": 2,
+    "nombre": "Derechos y deberes fundamentales",
+    "tipo": "verdadero_falso",
+    "total_preguntas": 36,
+    "preguntas": [
+      {
+        "id": 2001,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España, la Constitución obliga a todos los ciudadanos a practicar una religión.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2002,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los españoles que obtienen la nacionalidad por residencia deben esperar tres años para poder votar en las elecciones.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2003,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España, la Constitución prohíbe la tortura y la pena de muerte.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2004,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "El funcionamiento de los partidos políticos tiene que ser democrático.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2005,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Se puede obligar a alguien a decir cuáles son sus ideas políticas o religiosas.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2006,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Se puede limitar a una persona el derecho a entrar y salir libremente de España por motivos ideológicos.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2007,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La Educación Primaria (de 6 a 12 años) es gratuita y obligatoria.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2008,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La Constitución garantiza el derecho de los españoles a una vivienda digna.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2009,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España la policía puede entrar en cualquier casa sin resolución judicial en cualquier momento.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2010,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Se garantiza el secreto de las comunicaciones de los españoles, salvo resolución judicial.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2011,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La Constitución reconoce el derecho de los ciudadanos a asociarse libremente.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2012,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los profesores pueden enseñar con libertad, dentro de los límites de la Constitución.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2013,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La Constitución reconoce únicamente los derechos fundamentales de los españoles.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2014,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los ciudadanos deben colaborar con los jueces si se lo piden.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2015,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La ley limita el acceso de terceras personas a datos de carácter personal.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2016,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La libertad de prensa está limitada por el respeto al honor de las personas.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2017,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España las causas de separación y divorcio están reguladas por la ley.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso"
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2018,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La atención sanitaria gratuita es solo para personas mayores de 65 años.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2019,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España los hombres y las mujeres tienen los mismos derechos.",
+        "opciones": {
+          "a": "Verdadero",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero"
+      },
+      {
+        "id": 2020,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La enseñanza obligatoria consta de dos etapas: Educación Primaria y Educación Secundaria Obligatoria.",
+        "opciones": {
+          "a": "Verdadero",
+          "b": "Falso"
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero"
+      },
+      {
+        "id": 2021,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España hay una religión oficial.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2022,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La atención sanitaria pública es gratuita.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2023,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La enseñanza básica en España es solo para los extranjeros.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2024,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España está reconocido el derecho de asociación.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2025,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los sindicatos pueden participar en negociaciones con empresarios y con el Gobierno.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2026,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los trabajadores tienen derecho a hacer huelga.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2027,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La libertad ideológica está garantizada solo en parte del territorio nacional.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2028,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Todos los ciudadanos tienen acceso al sistema de Seguridad Social público, excepto si están desempleados.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2029,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Todos tienen derecho a disfrutar de un medio ambiente adecuado para el desarrollo de la persona, así como el deber de conservarlo.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2030,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España, los poderes públicos deben proteger la salud y promover el deporte.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2031,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La enseñanza básica en España es obligatoria y gratuita.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2032,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "La ley prohíbe la discriminación por cualquier circunstancia personal o social.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2033,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España, los ciudadanos pueden desplazarse libremente por todo el territorio nacional.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2034,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los jueces administran la justicia en España según las indicaciones del Gobierno.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Falso."
+      },
+      {
+        "id": 2035,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "Los españoles deben ayudar en los casos de catástrofe o calamidad pública.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      },
+      {
+        "id": 2036,
+        "tarea": 2,
+        "tarea_nombre": "Derechos y deberes fundamentales",
+        "tipo": "verdadero_falso",
+        "pregunta": "En España los ciudadanos pueden elegir en qué ciudad quieren vivir.",
+        "opciones": {
+          "a": "Verdadero.",
+          "b": "Falso."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Verdadero."
+      }
+    ]
+  },
+  "3": {
+    "tarea": 3,
+    "nombre": "Organización territorial de España. Geografía física y política",
+    "tipo": "opcion_multiple",
+    "total_preguntas": 24,
+    "preguntas": [
+      {
+        "id": 3001,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde están Cáceres y Badajoz?",
+        "opciones": {
+          "a": "En el Principado de Asturias.",
+          "b": "En Andalucía.",
+          "c": "En Extremadura."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "En Extremadura."
+      },
+      {
+        "id": 3002,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es la capital la Comunidad Valenciana?",
+        "opciones": {
+          "a": "Alicante.",
+          "b": "Castellón.",
+          "c": "Valencia."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Valencia."
+      },
+      {
+        "id": 3003,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde están las islas Baleares?",
+        "opciones": {
+          "a": "En el mar Cantábrico.",
+          "b": "En el mar Mediterráneo.",
+          "c": "En el océano Atlántico."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En el mar Mediterráneo."
+      },
+      {
+        "id": 3004,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la extensa llanura situada en el centro de la península ibérica?",
+        "opciones": {
+          "a": "Marisma.",
+          "b": "Cordillera.",
+          "c": "Meseta."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Meseta."
+      },
+      {
+        "id": 3005,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "El parque nacional de Ordesa está en...",
+        "opciones": {
+          "a": "Aragón.",
+          "b": "Navarra.",
+          "c": "Castilla-La Mancha."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Aragón."
+      },
+      {
+        "id": 3006,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué comunidad autónoma están Guadalajara y Cuenca?",
+        "opciones": {
+          "a": "En Castilla y León.",
+          "b": "En Castilla-La Mancha.",
+          "c": "En Cantabria."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En Castilla-La Mancha."
+      },
+      {
+        "id": 3007,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué comunidad autónoma tiene como capital Santiago de Compostela?",
+        "opciones": {
+          "a": "Galicia.",
+          "b": "Asturias.",
+          "c": "Cantabria."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Galicia."
+      },
+      {
+        "id": 3008,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde está Almería?",
+        "opciones": {
+          "a": "En Andalucía.",
+          "b": "En Canarias.",
+          "c": "En Aragón."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En Andalucía."
+      },
+      {
+        "id": 3009,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "La capital de la comunidad autónoma de Galicia es…",
+        "opciones": {
+          "a": "A Coruña.",
+          "b": "Vigo.",
+          "c": "Santiago de Compostela."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Santiago de Compostela."
+      },
+      {
+        "id": 3010,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos ríos desemboca en el mar Mediterráneo?",
+        "opciones": {
+          "a": "El Tajo.",
+          "b": "El Júcar.",
+          "c": "El Duero."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Júcar."
+      },
+      {
+        "id": 3011,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde está el monte Aneto?",
+        "opciones": {
+          "a": "En los Pirineos.",
+          "b": "En el Sistema Central.",
+          "c": "En Sierra Nevada."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En los Pirineos."
+      },
+      {
+        "id": 3012,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "La ciudad de Vitoria es la sede administrativa de…",
+        "opciones": {
+          "a": "Navarra.",
+          "b": "País Vasco.",
+          "c": "La Rioja."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "País Vasco."
+      },
+      {
+        "id": 3013,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "España se divide en…",
+        "opciones": {
+          "a": "departamentos y regiones.",
+          "b": "comunidades y ciudades autónomas.",
+          "c": "regiones autónomas y distritos."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "comunidades y ciudades autónomas."
+      },
+      {
+        "id": 3014,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "El parque nacional de Aigüestortes está en...",
+        "opciones": {
+          "a": "Cataluña.",
+          "b": "Aragón",
+          "c": "Castilla y León."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Cataluña."
+      },
+      {
+        "id": 3015,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "En el norte de África están Ceuta y…",
+        "opciones": {
+          "a": "Almería.",
+          "b": "Melilla.",
+          "c": "Cádiz."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Melilla."
+      },
+      {
+        "id": 3016,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué lugar de España hay un clima que se caracteriza por inviernos fríos y veranos muy calurosos?",
+        "opciones": {
+          "a": "Canarias.",
+          "b": "Comunidad Valenciana.",
+          "c": "Madrid."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Madrid."
+      },
+      {
+        "id": 3017,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos ríos desemboca en el océano Atlántico?",
+        "opciones": {
+          "a": "El Guadalquivir.",
+          "b": "El Manzanares.",
+          "c": "El Júcar."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El Guadalquivir."
+      },
+      {
+        "id": 3018,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estas provincias forma parte de la Comunidad de Castilla y León?",
+        "opciones": {
+          "a": "Burgos.",
+          "b": "Huesca.",
+          "c": "Guadalajara."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Burgos."
+      },
+      {
+        "id": 3019,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué comunidad autónoma está la ciudad de Huesca?",
+        "opciones": {
+          "a": "Castilla-La Mancha.",
+          "b": "Aragón.",
+          "c": "Extremadura."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Aragón."
+      },
+      {
+        "id": 3020,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "Canarias tiene un clima…",
+        "opciones": {
+          "a": "mediterráneo.",
+          "b": "oceánico.",
+          "c": "subtropical."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "subtropical."
+      },
+      {
+        "id": 3021,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "El principal río que desemboca en el mar Mediterráneo es el…",
+        "opciones": {
+          "a": "Ebro.",
+          "b": "Duero.",
+          "c": "Tajo."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Ebro."
+      },
+      {
+        "id": 3022,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "España está entre los países de Europa más…",
+        "opciones": {
+          "a": "lluviosos.",
+          "b": "montañosos.",
+          "c": "fríos."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "montañosos."
+      },
+      {
+        "id": 3023,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué provincia está el parque nacional de Monfragüe?",
+        "opciones": {
+          "a": "En Cáceres.",
+          "b": "En Murcia.",
+          "c": "En Ciudad Real."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En Cáceres."
+      },
+      {
+        "id": 3024,
+        "tarea": 3,
+        "tarea_nombre": "Organización territorial de España. Geografía física y política",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es la capital de la comunidad autónoma de Extremadura?",
+        "opciones": {
+          "a": "Cáceres.",
+          "b": "Badajoz.",
+          "c": "Mérida."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Mérida."
+      }
+    ]
+  },
+  "4": {
+    "tarea": 4,
+    "nombre": "Cultura e historia de España",
+    "tipo": "opcion_multiple",
+    "total_preguntas": 36,
+    "preguntas": [
+      {
+        "id": 4001,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los personajes principales de la novela el Quijote son don Quijote y…",
+        "opciones": {
+          "a": "Don Juan.",
+          "b": "Sancho Panza.",
+          "c": "Doña Inés."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Sancho Panza."
+      },
+      {
+        "id": 4002,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué científica española es reconocida por sus investigaciones?",
+        "opciones": {
+          "a": "Almudena Grandes.",
+          "b": "Montserrat Caballé.",
+          "c": "Margarita Salas."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Margarita Salas."
+      },
+      {
+        "id": 4003,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién escribió La casa de Bernarda Alba?",
+        "opciones": {
+          "a": "Federico García Lorca.",
+          "b": "Miguel de Cervantes.",
+          "c": "Antonio Machado."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Federico García Lorca."
+      },
+      {
+        "id": 4004,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién escribió Nada, una novela sobre la posguerra española?",
+        "opciones": {
+          "a": "Carmen Laforet.",
+          "b": "Ana María Matute.",
+          "c": "María Dueñas."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Carmen Laforet."
+      },
+      {
+        "id": 4005,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué músico compuso El amor brujo?",
+        "opciones": {
+          "a": "Manuel de Falla.",
+          "b": "Isaac Albéniz.",
+          "c": "Joaquín Rodrigo."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Manuel de Falla."
+      },
+      {
+        "id": 4006,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué es típico en la Noche de San Juan?",
+        "opciones": {
+          "a": "Comer uvas.",
+          "b": "Encender hogueras.",
+          "c": "Regalar libros."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Encender hogueras."
+      },
+      {
+        "id": 4007,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el instrumento más característico de la música flamenca?",
+        "opciones": {
+          "a": "La gaita.",
+          "b": "La guitarra.",
+          "c": "El piano."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "La guitarra."
+      },
+      {
+        "id": 4008,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "Isabel Coixet es una…",
+        "opciones": {
+          "a": "cantante pop.",
+          "b": "bailarina clásica.",
+          "c": "directora de cine."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "directora de cine."
+      },
+      {
+        "id": 4009,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "Una de las cantantes españolas más famosas actualmente es...",
+        "opciones": {
+          "a": "Rosalía.",
+          "b": "Marisol.",
+          "c": "Lola Flores."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Rosalía."
+      },
+      {
+        "id": 4010,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué ciudad de España hay una mezquita que es Patrimonio de la Humanidad?",
+        "opciones": {
+          "a": "Santiago de Compostela.",
+          "b": "Madrid.",
+          "c": "Córdoba."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Córdoba."
+      },
+      {
+        "id": 4011,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué ciudad de España se encuentra La Alhambra, que es Patrimonio de la Humanidad?",
+        "opciones": {
+          "a": "En Sevilla.",
+          "b": "En Córdoba.",
+          "c": "En Granada."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "En Granada."
+      },
+      {
+        "id": 4012,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el nombre de la directora española que ha destacado por su mirada crítica y por modernizar el cine nacional?",
+        "opciones": {
+          "a": "Pilar Miró.",
+          "b": "Sara Baras.",
+          "c": "Penélope Cruz."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Pilar Miró."
+      },
+      {
+        "id": 4013,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué novela de éxito ha escrito Irene Vallejo?",
+        "opciones": {
+          "a": "El infinito en un junco.",
+          "b": "El tiempo entre costuras.",
+          "c": "El camino."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El infinito en un junco."
+      },
+      {
+        "id": 4014,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la mayor institución pública dedicada a la investigación en España?",
+        "opciones": {
+          "a": "Real Academia Española (RAE).",
+          "b": "Consejo Superior de investigaciones Científicas (CSIC).",
+          "c": "La sociedad General de Autores (SGAE)."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Consejo Superior de investigaciones Científicas (CSIC)."
+      },
+      {
+        "id": 4015,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "Paco de Lucía fue un famoso….",
+        "opciones": {
+          "a": "científico.",
+          "b": "guitarrista.",
+          "c": "pintor."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "guitarrista."
+      },
+      {
+        "id": 4016,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué celebramos el 24 de diciembre?",
+        "opciones": {
+          "a": "Carnaval.",
+          "b": "Nochebuena.",
+          "c": "San Juan."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Nochebuena."
+      },
+      {
+        "id": 4017,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "Juan Mari Arzak es un famoso....",
+        "opciones": {
+          "a": "escritor.",
+          "b": "músico",
+          "c": "cocinero."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "cocinero."
+      },
+      {
+        "id": 4018,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién fue Clara Campoamor?",
+        "opciones": {
+          "a": "Una defensora de los derechos de la mujer.",
+          "b": "Una cantante lírica.",
+          "c": "Una directora de cine."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Una defensora de los derechos de la mujer."
+      },
+      {
+        "id": 4019,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué canciones típicas se cantan en Navidad?",
+        "opciones": {
+          "a": "Flamenco.",
+          "b": "Villancicos.",
+          "c": "Jotas."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Villancicos."
+      },
+      {
+        "id": 4020,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "La Liga y la Copa del Rey son competiciones de…",
+        "opciones": {
+          "a": "natación.",
+          "b": "atletismo.",
+          "c": "fútbol."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "fútbol."
+      },
+      {
+        "id": 4021,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Quién ha recibido el premio Nobel de Literatura?",
+        "opciones": {
+          "a": "María Zambrano.",
+          "b": "Pablo Picasso.",
+          "c": "Vicente Aleixandre."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Vicente Aleixandre."
+      },
+      {
+        "id": 4022,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué fiesta se celebra en Pamplona el 7 de julio?",
+        "opciones": {
+          "a": "Los sanfermines.",
+          "b": "Las Fallas.",
+          "c": "La Feria de Abril."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Los sanfermines."
+      },
+      {
+        "id": 4023,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "Teresa Perales y Daniel Molina son...",
+        "opciones": {
+          "a": "campeones paraolímpicos.",
+          "b": "músicos famosos.",
+          "c": "artistas de cine."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "campeones paraolímpicos."
+      },
+      {
+        "id": 4024,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué toman los españoles la noche del 31 de diciembre para celebrar el cambio de año?",
+        "opciones": {
+          "a": "Lentejas.",
+          "b": "Uvas.",
+          "c": "Aceitunas."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Uvas."
+      },
+      {
+        "id": 4025,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué mujer es autora del cuadro La verbena?",
+        "opciones": {
+          "a": "Maruja Mallo.",
+          "b": "Carmen Maura.",
+          "c": "Clara Lago."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Maruja Mallo."
+      },
+      {
+        "id": 4026,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué museo español puedes ver el cuadro Guernica de Picasso?",
+        "opciones": {
+          "a": "Museo del Prado.",
+          "b": "Museo Reina Sofía.",
+          "c": "Museo Thyssen-Bornemisza."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Museo Reina Sofía."
+      },
+      {
+        "id": 4027,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué escritora española escribe en otra lengua oficial de España?",
+        "opciones": {
+          "a": "Mercè Rodoreda.",
+          "b": "Almudena Grandes.",
+          "c": "Ana María Matute."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Mercè Rodoreda."
+      },
+      {
+        "id": 4028,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué tres culturas convivieron en la España medieval?",
+        "opciones": {
+          "a": "La cristiana, la judía y la musulmana.",
+          "b": "La fenicia, la judía y la musulmana.",
+          "c": "La griega, la cristiana y la judía."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "La cristiana, la judía y la musulmana."
+      },
+      {
+        "id": 4029,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "El 6 de diciembre se celebra en España…",
+        "opciones": {
+          "a": "el Día de la Constitución.",
+          "b": "la llegada de Colón a América.",
+          "c": "el Día del Libro."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el Día de la Constitución."
+      },
+      {
+        "id": 4030,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué ciudad fue un centro científico en Al-Ándalus, donde se estudiaba medicina y astronomía?",
+        "opciones": {
+          "a": "Barcelona.",
+          "b": "Madrid.",
+          "c": "Córdoba."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Córdoba."
+      },
+      {
+        "id": 4031,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En qué ciudad española está el Museo Guggenheim?",
+        "opciones": {
+          "a": "Bilbao.",
+          "b": "Madrid.",
+          "c": "Valencia."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Bilbao."
+      },
+      {
+        "id": 4032,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Premio Cervantes se da a…",
+        "opciones": {
+          "a": "actores.",
+          "b": "escritores.",
+          "c": "pintores."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "escritores."
+      },
+      {
+        "id": 4033,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué premio reconoce a los mejores actores y películas?",
+        "opciones": {
+          "a": "Premio Goya.",
+          "b": "Premio Nobel.",
+          "c": "Premio Cervantes."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Premio Goya."
+      },
+      {
+        "id": 4034,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué premios promueven en España valores científicos, culturales y humanísticos?",
+        "opciones": {
+          "a": "Los Premios Cervantes.",
+          "b": "Los Premios Princesa de Asturias.",
+          "c": "Los Premios Goya."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Los Premios Princesa de Asturias."
+      },
+      {
+        "id": 4035,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos deportes es muy popular en España?",
+        "opciones": {
+          "a": "El fútbol.",
+          "b": "El esquí",
+          "c": "El golf."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El fútbol."
+      },
+      {
+        "id": 4036,
+        "tarea": 4,
+        "tarea_nombre": "Cultura e historia de España",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos deportistas juega al tenis?",
+        "opciones": {
+          "a": "Pau Gasol.",
+          "b": "Carlos Sainz.",
+          "c": "Carlos Alcaraz."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Carlos Alcaraz."
+      }
+    ]
+  },
+  "5": {
+    "tarea": 5,
+    "nombre": "Sociedad española",
+    "tipo": "opcion_multiple",
+    "total_preguntas": 84,
+    "preguntas": [
+      {
+        "id": 5001,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué documento deben solicitar los extranjeros para residir legalmente en España?",
+        "opciones": {
+          "a": "El Documento Nacional de Identidad (DNI).",
+          "b": "La Tarjeta de Identidad de Extranjero (TIE).",
+          "c": "El certificado de empadronamiento."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "La Tarjeta de Identidad de Extranjero (TIE)."
+      },
+      {
+        "id": 5002,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el documento que certifica el lugar de residencia del titular?",
+        "opciones": {
+          "a": "El certificado de empadronamiento.",
+          "b": "La partida de nacimiento.",
+          "c": "El carné de conducir."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El certificado de empadronamiento."
+      },
+      {
+        "id": 5003,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿A qué sustituye el registro electrónico individual?",
+        "opciones": {
+          "a": "Al DNI.",
+          "b": "Al permiso de conducir.",
+          "c": "Al libro de familia."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Al libro de familia."
+      },
+      {
+        "id": 5004,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es la edad mínima para conducir un coche en España?",
+        "opciones": {
+          "a": "16 años.",
+          "b": "18 años.",
+          "c": "20 años."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "18 años."
+      },
+      {
+        "id": 5005,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El carné de conducir se hace en…",
+        "opciones": {
+          "a": "la Dirección General de Tráfico (DGT).",
+          "b": "la Policía Nacional.",
+          "c": "el Registro Civil."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "la Dirección General de Tráfico (DGT)."
+      },
+      {
+        "id": 5006,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Para sacar el carné de conducir hay que aprobar…",
+        "opciones": {
+          "a": "un examen teórico.",
+          "b": "un examen práctico.",
+          "c": "un examen teórico y otro práctico."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "un examen teórico y otro práctico."
+      },
+      {
+        "id": 5007,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde se tramita el libro de familia?",
+        "opciones": {
+          "a": "En el Registro Civil.",
+          "b": "En la Seguridad Social.",
+          "c": "En las comisarías de policía."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En el Registro Civil."
+      },
+      {
+        "id": 5008,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos canales de televisión es autonómico?",
+        "opciones": {
+          "a": "Telecinco.",
+          "b": "Nova.",
+          "c": "Canal Sur."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Canal Sur."
+      },
+      {
+        "id": 5009,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuánto dura el permiso de maternidad o paternidad?",
+        "opciones": {
+          "a": "12 semanas.",
+          "b": "19 semanas.",
+          "c": "22 semanas."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "19 semanas."
+      },
+      {
+        "id": 5010,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es la tasa máxima de alcohol en sangre permitida a los conductores, en gramos por litro (g/l)?",
+        "opciones": {
+          "a": "0,5.",
+          "b": "0,7.",
+          "c": "0,9."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "0,5."
+      },
+      {
+        "id": 5011,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el tipo de residencia más habitual en España?",
+        "opciones": {
+          "a": "Casa rural.",
+          "b": "Piso en un edificio de viviendas.",
+          "c": "Chalé independiente."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Piso en un edificio de viviendas."
+      },
+      {
+        "id": 5012,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué comunidad autónoma es conocida por la calidad de su aceite de oliva?",
+        "opciones": {
+          "a": "Cantabria.",
+          "b": "Andalucía.",
+          "c": "La Rioja."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Andalucía."
+      },
+      {
+        "id": 5013,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la revisión que deben pasar obligatoriamente los coches?",
+        "opciones": {
+          "a": "IBI (Impuesto sobre Bienes Inmuebles).",
+          "b": "ITV (Inspección Técnica de Vehículos).",
+          "c": "ITE (Inspección Técnica de Edificios)."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "ITV (Inspección Técnica de Vehículos)."
+      },
+      {
+        "id": 5014,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El aperitivo que acompaña a la bebida en bares y restaurantes se llama...",
+        "opciones": {
+          "a": "bocadillo.",
+          "b": "tapa.",
+          "c": "primer plato."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "tapa."
+      },
+      {
+        "id": 5015,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde se tramita la tarjeta sanitaria?",
+        "opciones": {
+          "a": "En la comisaría de policía.",
+          "b": "En el centro de salud.",
+          "c": "En el Ministerio de Sanidad."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En el centro de salud."
+      },
+      {
+        "id": 5016,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Con cuántos hijos una familia es numerosa?",
+        "opciones": {
+          "a": "Con 1 hijo.",
+          "b": "Con 2 hijos.",
+          "c": "Con 3 hijos."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Con 3 hijos."
+      },
+      {
+        "id": 5017,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "En España está permitido el matrimonio…",
+        "opciones": {
+          "a": "solo entre personas del mismo sexo.",
+          "b": "entre personas del mismo y diferente sexo.",
+          "c": "solo entre personas de diferente sexo."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "entre personas del mismo y diferente sexo."
+      },
+      {
+        "id": 5018,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los propietarios de perros deben registrarlos en…",
+        "opciones": {
+          "a": "el Ministerio de Justicia.",
+          "b": "la comisaría de policía.",
+          "c": "el Ayuntamiento."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "el Ayuntamiento."
+      },
+      {
+        "id": 5019,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los principales ingredientes de la tortilla española son huevos y…",
+        "opciones": {
+          "a": "pimientos.",
+          "b": "patatas.",
+          "c": "tomates."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "patatas."
+      },
+      {
+        "id": 5020,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es uno de los platos más conocidos internacionalmente de la gastronomía española?",
+        "opciones": {
+          "a": "Gazpacho.",
+          "b": "Pizza.",
+          "c": "Pasta."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Gazpacho."
+      },
+      {
+        "id": 5021,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos canales de televisión es público?",
+        "opciones": {
+          "a": "Tele 5.",
+          "b": "La 1.",
+          "c": "Antena 3."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "La 1."
+      },
+      {
+        "id": 5022,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "En una comunidad de vecinos, una de las normas es…",
+        "opciones": {
+          "a": "abrir la puerta al cartero.",
+          "b": "no molestar con ruido.",
+          "c": "limpiar los espacios comunes."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "no molestar con ruido."
+      },
+      {
+        "id": 5023,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos es el principal ingrediente de la paella valenciana?",
+        "opciones": {
+          "a": "Arroz.",
+          "b": "Chorizo.",
+          "c": "Garbanzos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Arroz."
+      },
+      {
+        "id": 5024,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "La sidra es una bebida típica de…",
+        "opciones": {
+          "a": "Asturias.",
+          "b": "Valencia.",
+          "c": "Canarias."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Asturias."
+      },
+      {
+        "id": 5025,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los españoles tienen dos apellidos, el primero es…",
+        "opciones": {
+          "a": "obligatoriamente el de la madre.",
+          "b": "obligatoriamente el del padre.",
+          "c": "puede ser el de la madre o el del padre."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "puede ser el de la madre o el del padre."
+      },
+      {
+        "id": 5026,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "La Fiesta Nacional de España es el…",
+        "opciones": {
+          "a": "6 de diciembre.",
+          "b": "15 de agosto.",
+          "c": "12 de octubre."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "12 de octubre."
+      },
+      {
+        "id": 5027,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué días suelen cerrar la mayoría de las tiendas o el pequeño comercio?",
+        "opciones": {
+          "a": "Los lunes.",
+          "b": "Los domingos.",
+          "c": "Los sábados por la tarde."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Los domingos."
+      },
+      {
+        "id": 5028,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde se hace el pasaporte?",
+        "opciones": {
+          "a": "En el registro civil.",
+          "b": "En una comisaría de policía.",
+          "c": "En el Ayuntamiento."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En una comisaría de policía."
+      },
+      {
+        "id": 5029,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Ministerio de Igualdad es el encargado de luchar contra la violencia de género y la…",
+        "opciones": {
+          "a": "separación.",
+          "b": "discriminación.",
+          "c": "solidaridad."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "discriminación."
+      },
+      {
+        "id": 5030,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué comunidad autónoma es conocida por la calidad de sus cavas?",
+        "opciones": {
+          "a": "Galicia.",
+          "b": "Cataluña.",
+          "c": "Castilla-La Mancha."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Cataluña."
+      },
+      {
+        "id": 5031,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué documento se necesita para recibir atención médica en la sanidad pública?",
+        "opciones": {
+          "a": "El pasaporte.",
+          "b": "La tarjeta sanitaria.",
+          "c": "El certificado de nacimiento."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "La tarjeta sanitaria."
+      },
+      {
+        "id": 5032,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El horario de Canarias, con respecto a la Península, es de…",
+        "opciones": {
+          "a": "dos horas menos.",
+          "b": "una hora menos.",
+          "c": "una hora más."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "una hora menos."
+      },
+      {
+        "id": 5033,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Para acceder a la Universidad se debe superar una prueba de evaluación llamada…",
+        "opciones": {
+          "a": "Selectividad.",
+          "b": "Examen preuniversitario.",
+          "c": "Prueba de Acceso a la Universidad."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Prueba de Acceso a la Universidad."
+      },
+      {
+        "id": 5034,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos productos necesita importar España de otros países?",
+        "opciones": {
+          "a": "Petróleo.",
+          "b": "Aceite de oliva.",
+          "c": "Medicamentos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Petróleo."
+      },
+      {
+        "id": 5035,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué tipo de impuestos tienen que pagar los ciudadanos en España?",
+        "opciones": {
+          "a": "Impuestos directos como el IRPF.",
+          "b": "Impuestos indirectos como el IVA.",
+          "c": "Impuestos directos e indirectos."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Impuestos directos e indirectos."
+      },
+      {
+        "id": 5036,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los adultos sin Bachillerato pueden estudiar en la Universidad haciendo una prueba especial a partir de los…",
+        "opciones": {
+          "a": "18 años.",
+          "b": "23 años.",
+          "c": "25 años."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "25 años."
+      },
+      {
+        "id": 5037,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde puede encontrarse la siguiente norma «No pisar el césped, ni arrancar flores»?",
+        "opciones": {
+          "a": "En zonas de recreo.",
+          "b": "En los teatros.",
+          "c": "En los estadios de fútbol."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En zonas de recreo."
+      },
+      {
+        "id": 5038,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Bachillerato en España…",
+        "opciones": {
+          "a": "es obligatorio.",
+          "b": "se compone de dos cursos académicos.",
+          "c": "es la enseñanza a alumnos de 14 a 16 años."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "se compone de dos cursos académicos."
+      },
+      {
+        "id": 5039,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Impuesto sobre el Valor Añadido (IVA) forma parte de los…",
+        "opciones": {
+          "a": "Impuestos indirectos.",
+          "b": "Impuestos sobre la renta.",
+          "c": "Impuestos sobre sociedades."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Impuestos indirectos."
+      },
+      {
+        "id": 5040,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué número reciben los trabajadores al comenzar su primer empleo?",
+        "opciones": {
+          "a": "El de la Seguridad Social.",
+          "b": "El del pasaporte.",
+          "c": "El número de servicio."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "El de la Seguridad Social."
+      },
+      {
+        "id": 5041,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los colegios públicos…",
+        "opciones": {
+          "a": "pueden decidir su número de plazas.",
+          "b": "pueden contratar a los profesores que quieran.",
+          "c": "son gratuitos."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "son gratuitos."
+      },
+      {
+        "id": 5042,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos puertos es uno de los principales de España?",
+        "opciones": {
+          "a": "Tenerife.",
+          "b": "Alicante.",
+          "c": "Algeciras."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Algeciras."
+      },
+      {
+        "id": 5043,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Un colegio concertado es un colegio privado que…",
+        "opciones": {
+          "a": "recibe dinero de la Administración.",
+          "b": "financian los padres de los alumnos.",
+          "c": "recibe dinero de los bancos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "recibe dinero de la Administración."
+      },
+      {
+        "id": 5044,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "España exporta productos principalmente a países…",
+        "opciones": {
+          "a": "de Hispanoamérica.",
+          "b": "de la Unión Europea.",
+          "c": "del norte de África."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "de la Unión Europea."
+      },
+      {
+        "id": 5045,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las bibliotecas públicas son gratuitas para…",
+        "opciones": {
+          "a": "todos.",
+          "b": "los parados.",
+          "c": "los niños."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "todos."
+      },
+      {
+        "id": 5046,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos productos exporta España más que importa?",
+        "opciones": {
+          "a": "Gas.",
+          "b": "Ropa.",
+          "c": "Calzado."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Calzado."
+      },
+      {
+        "id": 5047,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Una persona mayor de 18 años puede obtener el título de Graduado en Educación Secundaria Obligatoria en…",
+        "opciones": {
+          "a": "un Centro de Educación de Personas Adultas.",
+          "b": "un centro de enseñanza primaria.",
+          "c": "una universidad."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "un Centro de Educación de Personas Adultas."
+      },
+      {
+        "id": 5048,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "La formación profesional…",
+        "opciones": {
+          "a": "es para mayores de 25 años.",
+          "b": "puede ser de grado medio o superior.",
+          "c": "es obligatoria."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "puede ser de grado medio o superior."
+      },
+      {
+        "id": 5049,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Adónde vamos para ver al médico de familia o al pediatra?",
+        "opciones": {
+          "a": "Al hospital.",
+          "b": "Al centro de salud.",
+          "c": "A la farmacia."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Al centro de salud."
+      },
+      {
+        "id": 5050,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Para cuántos años vale la tarjeta sanitaria europea?",
+        "opciones": {
+          "a": "Para un año.",
+          "b": "Para dos años.",
+          "c": "Para 10 años."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Para dos años."
+      },
+      {
+        "id": 5051,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿A qué hora se cena normalmente en España?",
+        "opciones": {
+          "a": "A las 18 h.",
+          "b": "A las 23 h.",
+          "c": "A las 21 o 22 h."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "A las 21 o 22 h."
+      },
+      {
+        "id": 5052,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el número de teléfono único para cualquier emergencia?",
+        "opciones": {
+          "a": "060.",
+          "b": "112.",
+          "c": "911."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "112."
+      },
+      {
+        "id": 5053,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos periódicos se publica a nivel nacional?",
+        "opciones": {
+          "a": "El Diario Vasco.",
+          "b": "El País.",
+          "c": "La Voz de Galicia."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El País."
+      },
+      {
+        "id": 5054,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde se venden sellos y tabaco?",
+        "opciones": {
+          "a": "En el quiosco.",
+          "b": "En la farmacia.",
+          "c": "En el estanco."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "En el estanco."
+      },
+      {
+        "id": 5055,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuándo se puede llamar al número de teléfono para atención a víctimas de violencia de género?",
+        "opciones": {
+          "a": "Las 24 horas del día.",
+          "b": "En horario de mañana.",
+          "c": "De lunes a viernes."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Las 24 horas del día."
+      },
+      {
+        "id": 5056,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "La organización que trabaja para conseguir la integración de las personas con discapacidad visual es…",
+        "opciones": {
+          "a": "la ONCE.",
+          "b": "Unicef.",
+          "c": "Cáritas."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "la ONCE."
+      },
+      {
+        "id": 5057,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El Camino de Santiago es…",
+        "opciones": {
+          "a": "Patrimonio de la Humanidad.",
+          "b": "una vía de ferrocarril.",
+          "c": "una ruta para excursionistas."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Patrimonio de la Humanidad."
+      },
+      {
+        "id": 5058,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el canal de televisión estatal que transmite noticias de actualidad nacional e internacional continuamente?",
+        "opciones": {
+          "a": "Teledeporte.",
+          "b": "La 1.",
+          "c": "Canal 24 horas."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Canal 24 horas."
+      },
+      {
+        "id": 5059,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El teléfono gratuito para las víctimas de violencia de género es el…",
+        "opciones": {
+          "a": "091.",
+          "b": "112.",
+          "c": "016."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "016."
+      },
+      {
+        "id": 5060,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "En España, la red de trenes puede ser de larga distancia, de media distancia y…",
+        "opciones": {
+          "a": "de cercanías.",
+          "b": "rural.",
+          "c": "transnacional."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "de cercanías."
+      },
+      {
+        "id": 5061,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué está prohibido en la puerta de un colegio?",
+        "opciones": {
+          "a": "Fumar un cigarrillo.",
+          "b": "Conducir un coche.",
+          "c": "Vender refrescos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Fumar un cigarrillo."
+      },
+      {
+        "id": 5062,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué título se obtiene al finalizar un ciclo de grado medio de Formación Profesional?",
+        "opciones": {
+          "a": "Bachiller.",
+          "b": "Técnico.",
+          "c": "Graduado en ESO."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Técnico."
+      },
+      {
+        "id": 5063,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué título se obtiene tras realizar una tesis doctoral en España?",
+        "opciones": {
+          "a": "Máster.",
+          "b": "Graduado.",
+          "c": "Doctor."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "Doctor."
+      },
+      {
+        "id": 5064,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Dónde se compran las medicinas con receta?",
+        "opciones": {
+          "a": "En el hospital",
+          "b": "En el centro de salud.",
+          "c": "En la farmacia."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "En la farmacia."
+      },
+      {
+        "id": 5065,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estas tres recomendaciones podemos encontrar en un parque?",
+        "opciones": {
+          "a": "No pisar el césped.",
+          "b": "Se recomienda pagar el billete con el dinero justo.",
+          "c": "Respetar las normas sobre equipaje."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "No pisar el césped."
+      },
+      {
+        "id": 5066,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de las siguientes cosas es obligatoria para el propietario de un coche en España?",
+        "opciones": {
+          "a": "El garaje",
+          "b": "El seguro.",
+          "c": "La alarma."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El seguro."
+      },
+      {
+        "id": 5067,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "El aeropuerto Adolfo Suárez está en…",
+        "opciones": {
+          "a": "Barcelona.",
+          "b": "Madrid",
+          "c": "Bilbao."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Madrid"
+      },
+      {
+        "id": 5068,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "En un coche es obligatorio el uso del cinturón de seguridad...",
+        "opciones": {
+          "a": "solo en el asiento del conductor.",
+          "b": "en los asientos delanteros.",
+          "c": "en todos los asientos."
+        },
+        "respuesta_correcta": "c",
+        "respuesta_correcta_texto": "en todos los asientos."
+      },
+      {
+        "id": 5069,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el límite de velocidad en autopista?",
+        "opciones": {
+          "a": "90 km/h.",
+          "b": "120 km/h.",
+          "c": "150 km/h."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "120 km/h."
+      },
+      {
+        "id": 5070,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Ceder el asiento a las personas con movilidad reducida es una norma que encontramos indicada en…",
+        "opciones": {
+          "a": "el transporte público.",
+          "b": "las bibliotecas.",
+          "c": "los museos."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "el transporte público."
+      },
+      {
+        "id": 5071,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el medio de transporte público que tiene una luz verde encendida si está libre?",
+        "opciones": {
+          "a": "El autobús.",
+          "b": "El taxi.",
+          "c": "El tranvía."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El taxi."
+      },
+      {
+        "id": 5072,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué debes hacer si tienes un perro?",
+        "opciones": {
+          "a": "Pasearlo sin correa.",
+          "b": "Ponerle un microchip y vacunarlo",
+          "c": "No recoger sus excrementos."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Ponerle un microchip y vacunarlo"
+      },
+      {
+        "id": 5073,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los españoles necesitan el pasaporte para viajar a…",
+        "opciones": {
+          "a": "Italia.",
+          "b": "China.",
+          "c": "Alemania."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "China."
+      },
+      {
+        "id": 5074,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es la edad mínima para trabajar en España?",
+        "opciones": {
+          "a": "16 años.",
+          "b": "18 años.",
+          "c": "21 años."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "16 años."
+      },
+      {
+        "id": 5075,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el sector de mayor peso en la economía española?",
+        "opciones": {
+          "a": "Agricultura.",
+          "b": "Servicios.",
+          "c": "Construcción."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "Servicios."
+      },
+      {
+        "id": 5076,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "España es innovadora en el sector de…",
+        "opciones": {
+          "a": "la ingeniería aeroespacial.",
+          "b": "las energías renovables.",
+          "c": "la energía nuclear."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "las energías renovables."
+      },
+      {
+        "id": 5077,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cómo se llama la ley laboral más importante de España?",
+        "opciones": {
+          "a": "La Constitución.",
+          "b": "El Estatuto de los Trabajadores.",
+          "c": "El Servicio Público de Empleo Estatal."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "El Estatuto de los Trabajadores."
+      },
+      {
+        "id": 5078,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál de estos establecimientos está abierto 24 horas si es necesario?",
+        "opciones": {
+          "a": "Farmacia.",
+          "b": "Pescadería.",
+          "c": "Librería."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Farmacia."
+      },
+      {
+        "id": 5079,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "La educación infantil en España…",
+        "opciones": {
+          "a": "es obligatoria.",
+          "b": "tiene dos ciclos.",
+          "c": "empieza a los 4 años."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "tiene dos ciclos."
+      },
+      {
+        "id": 5080,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuándo empieza el calendario escolar?",
+        "opciones": {
+          "a": "En agosto.",
+          "b": "En septiembre.",
+          "c": "En octubre."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "En septiembre."
+      },
+      {
+        "id": 5081,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Las Escuelas Oficiales de Idiomas…",
+        "opciones": {
+          "a": "son centros de enseñanza privada.",
+          "b": "son para mayores de 16 años.",
+          "c": "dependen del Instituto Cervantes."
+        },
+        "respuesta_correcta": "b",
+        "respuesta_correcta_texto": "son para mayores de 16 años."
+      },
+      {
+        "id": 5082,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Cuál es el documento que recoge los años de cotización a la Seguridad Social?",
+        "opciones": {
+          "a": "Informe de vida laboral.",
+          "b": "Recibo de finiquito.",
+          "c": "Certificado de profesionalidad."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "Informe de vida laboral."
+      },
+      {
+        "id": 5083,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "Los convenios colectivos de una empresa son los que se firman con los representantes de los trabajadores sobre…",
+        "opciones": {
+          "a": "las condiciones laborales.",
+          "b": "el futuro de la empresa.",
+          "c": "la relación con los clientes."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "las condiciones laborales."
+      },
+      {
+        "id": 5084,
+        "tarea": 5,
+        "tarea_nombre": "Sociedad española",
+        "tipo": "opcion_multiple",
+        "pregunta": "¿En cuál de estos sectores destaca España?",
+        "opciones": {
+          "a": "En el turismo.",
+          "b": "En la industria automovilística.",
+          "c": "En tecnología digital."
+        },
+        "respuesta_correcta": "a",
+        "respuesta_correcta_texto": "En el turismo."
+      }
+    ]
+  }
+}

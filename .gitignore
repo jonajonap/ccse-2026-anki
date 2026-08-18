@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos PDF (evitar subida de binarios editoriales con copyright)
+*.pdf
+
+# Archivos del sistema macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log

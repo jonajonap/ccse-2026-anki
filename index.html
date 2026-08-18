@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCSE 2026 Anki - Preparador Oficial de Nacionalidad Española</title>
+  <meta name="description" content="Practica las 300 preguntas oficiales del examen CCSE 2026 de nacionalidad española con sistema de repetición espaciada Anki y simulador oficial.">
+  
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a'
+            },
+            anki: {
+              again: '#ef4444',
+              hard: '#f59e0b',
+              good: '#10b981',
+              easy: '#3b82f6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased flex flex-col transition-colors duration-300 selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="app.switchView('anki')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-amber-500 flex items-center justify-center shadow-lg shadow-brand-500/20">
+          <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">CCSE 2026</span>
+            <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brand-500/20 text-brand-400 rounded-full border border-brand-500/30">Anki SRS</span>
+          </div>
+          <p class="text-[11px] text-slate-400">Instituto Cervantes • 300 Preguntas</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800">
+        <button id="nav-btn-anki" onclick="app.switchView('anki')" class="nav-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all bg-brand-600 text-white shadow-sm">
+          <i data-lucide="brain" class="w-4 h-4"></i>
+          <span>Modo Anki</span>
+          <span id="badge-due-count" class="px-1.5 py-0.2 bg-white/20 text-white text-[10px] rounded-full font-mono">0</span>
+        </button>
+
+        <button id="nav-btn-catalog" onclick="app.switchView('catalog')" class="nav-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-slate-800/60">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Todas las Preguntas</span>
+          <span class="px-1.5 py-0.2 bg-slate-800 text-slate-400 text-[10px] rounded-full font-mono">300</span>
+        </button>
+
+        <button id="nav-btn-exam" onclick="app.switchView('exam')" class="nav-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-slate-800/60">
+          <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          <span>Simulador Examen</span>
+        </button>
+
+        <button id="nav-btn-stats" onclick="app.switchView('stats')" class="nav-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-slate-800/60">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Estadísticas</span>
+        </button>
+      </nav>
+
+      <!-- Quick Badges & Settings -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Daily Streak Badge -->
+        <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold" title="Racha de días estudiando">
+          <i data-lucide="flame" class="w-4 h-4 fill-amber-500 text-amber-500 animate-bounce"></i>
+          <span id="streak-counter">0</span> <span class="hidden sm:inline">días</span>
+        </div>
+
+        <!-- Mastered Cards Badge -->
+        <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold" title="Tarjetas dominadas (Intervalo ≥ 21 días)">
+          <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i>
+          <span id="mastered-counter">0/300</span>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle-btn" onclick="app.toggleTheme()" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 transition" title="Cambiar tema">
+          <i data-lucide="sun" id="theme-icon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Settings Modal Trigger -->
+        <button onclick="app.openSettingsModal()" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-slate-200 border border-slate-800 transition" title="Ajustes y copia de seguridad">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Bar (Bottom / Subheader) -->
+    <div class="md:hidden flex items-center justify-around border-t border-slate-800 px-2 py-1.5 bg-slate-950/90 text-[11px]">
+      <button onclick="app.switchView('anki')" class="flex flex-col items-center gap-0.5 py-1 px-2 text-brand-400 font-medium">
+        <i data-lucide="brain" class="w-4 h-4"></i>
+        <span>Anki</span>
+      </button>
+      <button onclick="app.switchView('catalog')" class="flex flex-col items-center gap-0.5 py-1 px-2 text-slate-400 font-medium">
+        <i data-lucide="book-open" class="w-4 h-4"></i>
+        <span>Catálogo</span>
+      </button>
+      <button onclick="app.switchView('exam')" class="flex flex-col items-center gap-0.5 py-1 px-2 text-slate-400 font-medium">
+        <i data-lucide="file-check-2" class="w-4 h-4"></i>
+        <span>Examen</span>
+      </button>
+      <button onclick="app.switchView('stats')" class="flex flex-col items-center gap-0.5 py-1 px-2 text-slate-400 font-medium">
+        <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+        <span>Stats</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 flex flex-col">
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 1: MODO ANKI / FLASHCARDS SRS -->
+    <!-- ========================================================================= -->
+    <section id="view-anki" class="flex-1 flex flex-col max-w-3xl mx-auto w-full">
+      
+      <!-- Top Deck Filters & Mode bar -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <!-- Deck Selector -->
+        <div class="flex items-center gap-2">
+          <label for="deck-filter" class="text-xs font-semibold text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="filter" class="w-3.5 h-3.5"></i> Mazo:
+          </label>
+          <select id="deck-filter" onchange="app.changeDeckFilter(this.value)" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-xl px-3 py-1.5 focus:ring-2 focus:ring-brand-500 focus:outline-none cursor-pointer">
+            <option value="all">📚 Todas las Tareas (300 preguntas)</option>
+            <option value="1">🏛️ Tarea 1: Gobierno y legislación (120)</option>
+            <option value="2">⚖️ Tarea 2: Derechos y deberes (36)</option>
+            <option value="3">🗺️ Tarea 3: Geografía y territorio (24)</option>
+            <option value="4">🎨 Tarea 4: Cultura e historia (36)</option>
+            <option value="5">👥 Tarea 5: Sociedad española (84)</option>
+            <option value="difficult">🔥 Tarjetas Difíciles / Con fallos</option>
+          </select>
+        </div>
+
+        <!-- Session Progress Counter -->
+        <div class="flex items-center gap-3 text-xs">
+          <div class="flex items-center gap-1.5 text-blue-400 font-mono">
+            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            Nuevas: <strong id="session-new-count">0</strong>
+          </div>
+          <div class="flex items-center gap-1.5 text-amber-400 font-mono">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            Repaso: <strong id="session-due-count">0</strong>
+          </div>
+          <div class="flex items-center gap-1.5 text-emerald-400 font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Completadas: <strong id="session-done-count">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linear Progress Bar -->
+      <div class="w-full bg-slate-900 rounded-full h-1.5 mb-6 overflow-hidden border border-slate-800">
+        <div id="session-progress-bar" class="bg-gradient-to-r from-brand-500 to-indigo-500 h-full w-0 transition-all duration-300"></div>
+      </div>
+
+      <!-- FLASHCARD CONTAINER -->
+      <div id="flashcard-wrapper" class="flex-1 flex flex-col justify-center min-h-[420px] sm:min-h-[460px] perspective-1000">
+        
+        <!-- CARD ELEMENT (FLIPPABLE) -->
+        <div id="flashcard" class="flashcard-inner relative w-full h-full min-h-[420px] rounded-3xl cursor-default shadow-2xl">
+
+          <!-- FRONT SIDE (PREGUNTA + OPCIONES) -->
+          <div class="flashcard-face absolute inset-0 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800/80 bg-slate-900/90">
+            
+            <!-- Card Header -->
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                  <span id="card-id-badge" class="px-2.5 py-1 text-xs font-mono font-bold bg-slate-800 text-brand-400 rounded-lg border border-slate-700">#1001</span>
+                  <span id="card-task-badge" class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-lg border border-indigo-500/20">Tarea 1</span>
+                  <span id="card-type-badge" class="px-2 py-0.5 text-[10px] uppercase font-bold text-slate-400 bg-slate-800/60 rounded">Opción Múltiple</span>
+                </div>
+                
+                <div class="flex items-center gap-1.5 text-xs text-slate-400">
+                  <span id="card-interval-badge" class="font-mono text-[11px] px-2 py-0.5 rounded bg-slate-800/60">Nuevo</span>
+                </div>
+              </div>
+
+              <!-- Question Text -->
+              <h2 id="card-question-text" class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug mt-2">
+                Cargando pregunta...
+              </h2>
+            </div>
+
+            <!-- Options List (Interactive on front) -->
+            <div id="card-options-front" class="my-6 space-y-2.5">
+              <!-- Dynamically populated options -->
+            </div>
+
+            <!-- Card Front Action / Flip Prompt -->
+            <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between">
+              <span class="text-xs text-slate-400 flex items-center gap-1.5">
+                <kbd class="px-2 py-1 bg-slate-800 border border-slate-700 rounded text-[10px] font-mono text-slate-300">Espacio</kbd> para mostrar respuesta
+              </span>
+
+              <button onclick="app.flipCard()" class="px-5 py-2.5 bg-brand-600 hover:bg-brand-500 text-white rounded-xl text-xs font-semibold flex items-center gap-2 shadow-lg shadow-brand-500/20 transition transform active:scale-95">
+                <span>Mostrar Respuesta</span>
+                <i data-lucide="rotate-cw" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- BACK SIDE (RESPUESTA CORRECTA + CALIFICACIÓN ANKI) -->
+          <div class="flashcard-face flashcard-back absolute inset-0 glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-emerald-500/30 bg-slate-900/95">
+            
+            <!-- Back Header -->
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                  <span id="back-card-id-badge" class="px-2.5 py-1 text-xs font-mono font-bold bg-slate-800 text-brand-400 rounded-lg border border-slate-700">#1001</span>
+                  <span id="back-card-task-badge" class="px-2.5 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-lg border border-indigo-500/20">Tarea 1</span>
+                </div>
+                <div class="flex items-center gap-1 text-emerald-400 text-xs font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Solución Oficial
+                </div>
+              </div>
+
+              <!-- Question Reminder -->
+              <p id="back-card-question-text" class="text-sm font-medium text-slate-300 mb-4 line-clamp-2">
+                ...
+              </p>
+
+              <!-- Highlighted Correct Answer -->
+              <div class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 shadow-inner">
+                <div class="text-[11px] uppercase tracking-wider font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
+                  <i data-lucide="badge-check" class="w-4 h-4"></i> Respuesta Correcta:
+                </div>
+                <div id="back-correct-answer" class="text-lg font-bold text-emerald-200">
+                  ...
+                </div>
+              </div>
+
+              <!-- Options Recap -->
+              <div id="back-options-recap" class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <!-- Recap of all options with marked correct one -->
+              </div>
+            </div>
+
+            <!-- ANKI 4 RATING BUTTONS -->
+            <div class="pt-4 border-t border-slate-800">
+              <div class="text-center text-xs text-slate-400 mb-3 font-medium">
+                ¿Qué tan bien recordabas esta respuesta? (Atajos: <kbd class="font-mono text-slate-300">1</kbd>, <kbd class="font-mono text-slate-300">2</kbd>, <kbd class="font-mono text-slate-300">3</kbd>, <kbd class="font-mono text-slate-300">4</kbd>)
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                <!-- 1: Otra vez (Again) -->
+                <button onclick="app.rateCard(1)" class="group flex flex-col items-center justify-center p-3 rounded-2xl bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 hover:border-rose-500/60 text-rose-400 transition active:scale-95">
+                  <span class="text-xs font-bold flex items-center gap-1">
+                    <kbd class="text-[10px] px-1.5 py-0.5 bg-rose-950 rounded font-mono border border-rose-800">1</kbd>
+                    Otra vez
+                  </span>
+                  <span id="preview-interval-again" class="text-[11px] text-rose-300/80 font-mono mt-0.5">&lt; 10 min</span>
+                </button>
+
+                <!-- 2: Difícil (Hard) -->
+                <button onclick="app.rateCard(2)" class="group flex flex-col items-center justify-center p-3 rounded-2xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 hover:border-amber-500/60 text-amber-400 transition active:scale-95">
+                  <span class="text-xs font-bold flex items-center gap-1">
+                    <kbd class="text-[10px] px-1.5 py-0.5 bg-amber-950 rounded font-mono border border-amber-800">2</kbd>
+                    Difícil
+                  </span>
+                  <span id="preview-interval-hard" class="text-[11px] text-amber-300/80 font-mono mt-0.5">1 día</span>
+                </button>
+
+                <!-- 3: Bien (Good) -->
+                <button onclick="app.rateCard(3)" class="group flex flex-col items-center justify-center p-3 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500/60 text-emerald-400 transition active:scale-95">
+                  <span class="text-xs font-bold flex items-center gap-1">
+                    <kbd class="text-[10px] px-1.5 py-0.5 bg-emerald-950 rounded font-mono border border-emerald-800">3</kbd>
+                    Bien
+                  </span>
+                  <span id="preview-interval-good" class="text-[11px] text-emerald-300/80 font-mono mt-0.5">3 días</span>
+                </button>
+
+                <!-- 4: Fácil (Easy) -->
+                <button onclick="app.rateCard(4)" class="group flex flex-col items-center justify-center p-3 rounded-2xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 hover:border-blue-500/60 text-blue-400 transition active:scale-95">
+                  <span class="text-xs font-bold flex items-center gap-1">
+                    <kbd class="text-[10px] px-1.5 py-0.5 bg-blue-950 rounded font-mono border border-blue-800">4</kbd>
+                    Fácil
+                  </span>
+                  <span id="preview-interval-easy" class="text-[11px] text-blue-300/80 font-mono mt-0.5">7 días</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SESSION COMPLETED EMPTY STATE (HIDDEN BY DEFAULT) -->
+      <div id="session-completed-view" class="hidden flex-1 flex-col items-center justify-center text-center p-8 glass-panel rounded-3xl border border-slate-800">
+        <div class="w-20 h-20 rounded-3xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6 animate-pulse">
+          <i data-lucide="check-check" class="w-10 h-10"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">¡Sesión de Repaso Completada!</h2>
+        <p class="text-sm text-slate-400 max-w-md mb-6">
+          Has repasado todas las tarjetas programadas para el mazo actual. Tus intervalos han sido actualizados con el algoritmo SM-2.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <button onclick="app.restartSession('all')" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition flex items-center gap-2 shadow-lg shadow-brand-500/20">
+            <i data-lucide="play" class="w-4 h-4"></i> Continuar practicando (Modo Libre)
+          </button>
+          <button onclick="app.switchView('exam')" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-2 border border-slate-700">
+            <i data-lucide="file-check-2" class="w-4 h-4"></i> Hacer Simulacro de Examen
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Shortcuts Footer -->
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-500">
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono text-slate-400">Espacio</kbd> Voltear</span>
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono text-slate-400">A / B / C</kbd> Seleccionar opción</span>
+        <span class="flex items-center gap-1"><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono text-slate-400">1 - 4</kbd> Calificar</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 2: CATÁLOGO Y EXPLORADOR DE PREGUNTAS (POR CATEGORÍA) -->
+    <!-- ========================================================================= -->
+    <section id="view-catalog" class="hidden flex-1 flex flex-col w-full">
+      
+      <!-- Catalog Header -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <div>
+          <h1 class="text-2xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
+            <i data-lucide="book-open" class="w-6 h-6 text-brand-400"></i>
+            Catálogo Oficial de Preguntas CCSE 2026
+          </h1>
+          <p class="text-xs text-slate-400 mt-1">Explora, busca y filtra las 300 preguntas y respuestas organizadas por sus 5 tareas oficiales.</p>
+        </div>
+
+        <!-- Catalog Global Actions -->
+        <div class="flex items-center gap-2">
+          <button id="toggle-all-answers-btn" onclick="catalog.toggleAllAnswers()" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 text-xs font-semibold flex items-center gap-2 transition">
+            <i data-lucide="eye" id="toggle-all-answers-icon" class="w-4 h-4 text-brand-400"></i>
+            <span id="toggle-all-answers-text">Mostrar todas las respuestas</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Tabs by Task -->
+      <div class="flex overflow-x-auto pb-2 gap-2 mb-4 scrollbar-none">
+        <button onclick="catalog.filterByTask('all')" class="cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-brand-600 text-white shadow-sm" data-task="all">
+          Todas (300)
+        </button>
+        <button onclick="catalog.filterByTask('1')" class="cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-task="1">
+          🏛️ Tarea 1: Gobierno (120)
+        </button>
+        <button onclick="catalog.filterByTask('2')" class="cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-task="2">
+          ⚖️ Tarea 2: Derechos (36)
+        </button>
+        <button onclick="catalog.filterByTask('3')" class="cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-task="3">
+          🗺️ Tarea 3: Geografía (24)
+        </button>
+        <button onclick="catalog.filterByTask('4')" class="cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-task="4">
+          🎨 Tarea 4: Cultura (36)
+        </button>
+        <button onclick="catalog.filterByTask('5')" class="cat-task-btn px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800" data-task="5">
+          👥 Tarea 5: Sociedad (84)
+        </button>
+      </div>
+
+      <!-- Search & Options Bar -->
+      <div class="flex flex-col sm:flex-row gap-3 mb-6">
+        <div class="relative flex-1">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500"></i>
+          <input 
+            type="text" 
+            id="catalog-search-input" 
+            oninput="catalog.onSearchInput(this.value)" 
+            placeholder="Buscar por palabra clave, número (ej. 1001, 2015), tema o respuesta..." 
+            class="w-full bg-slate-900 border border-slate-800 rounded-xl pl-10 pr-4 py-2.5 text-xs text-slate-200 placeholder-slate-500 focus:ring-2 focus:ring-brand-500 focus:outline-none"
+          />
+        </div>
+
+        <div class="flex items-center gap-2">
+          <select id="catalog-type-filter" onchange="catalog.filterByType(this.value)" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <option value="all">Todos los tipos</option>
+            <option value="opcion_multiple">Opción Múltiple (A, B, C)</option>
+            <option value="verdadero_falso">Verdadero / Falso</option>
+          </select>
+
+          <span id="catalog-results-count" class="text-xs font-mono text-slate-400 whitespace-nowrap px-3 py-2 bg-slate-900 border border-slate-800 rounded-xl">
+            300 preguntas
+          </span>
+        </div>
+      </div>
+
+      <!-- Questions List Grid -->
+      <div id="catalog-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 3: SIMULADOR DE EXAMEN CCSE (25 PREGUNTAS - 45 MIN) -->
+    <!-- ========================================================================= -->
+    <section id="view-exam" class="hidden flex-1 flex flex-col w-full max-w-4xl mx-auto">
+      
+      <!-- EXAM INTRO SCREEN (SHOWN BEFORE START) -->
+      <div id="exam-intro-screen" class="glass-panel rounded-3xl p-8 border border-slate-800 text-center max-w-2xl mx-auto my-auto">
+        <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mx-auto mb-6">
+          <i data-lucide="file-check-2" class="w-8 h-8"></i>
+        </div>
+        
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Simulador de Examen Oficial CCSE</h2>
+        <p class="text-sm text-slate-400 mb-6">
+          Prueba real con 25 preguntas ponderadas exactamente como en el examen oficial del Instituto Cervantes.
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left mb-8 text-xs">
+          <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+            <span class="text-slate-400 block mb-1">Preguntas</span>
+            <strong class="text-white text-sm">25 en total</strong>
+          </div>
+          <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+            <span class="text-slate-400 block mb-1">Tiempo límite</span>
+            <strong class="text-white text-sm">45 minutos</strong>
+          </div>
+          <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+            <span class="text-slate-400 block mb-1">Criterio Apto</span>
+            <strong class="text-emerald-400 text-sm">Mínimo 15 (60%)</strong>
+          </div>
+          <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800">
+            <span class="text-slate-400 block mb-1">Ponderación</span>
+            <strong class="text-indigo-400 text-sm">Distribución oficial</strong>
+          </div>
+        </div>
+
+        <button onclick="examUI.startExam()" class="px-8 py-3.5 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white rounded-2xl font-bold text-sm shadow-xl shadow-brand-500/20 transition transform active:scale-95 inline-flex items-center gap-2">
+          <i data-lucide="play" class="w-4 h-4"></i> Comenzar Simulacro Ahora
+        </button>
+      </div>
+
+      <!-- EXAM ACTIVE SCREEN (QUESTIONS & TIMER) -->
+      <div id="exam-active-screen" class="hidden flex-1 flex flex-col">
+        <!-- Exam Header -->
+        <div class="flex items-center justify-between glass-panel p-4 rounded-2xl border border-slate-800 mb-4">
+          <div class="flex items-center gap-3">
+            <span id="exam-q-number" class="text-xs font-mono font-bold text-brand-400 bg-brand-500/10 px-2.5 py-1 rounded-lg border border-brand-500/20">Pregunta 1 de 25</span>
+            <span id="exam-q-task" class="text-xs font-medium text-slate-400 hidden sm:inline">Tarea 1</span>
+          </div>
+
+          <!-- Timer -->
+          <div class="flex items-center gap-2 px-3.5 py-1.5 bg-slate-900 rounded-xl border border-slate-800 text-slate-200 font-mono text-sm font-bold">
+            <i data-lucide="clock" class="w-4 h-4 text-amber-400"></i>
+            <span id="exam-timer">45:00</span>
+          </div>
+
+          <!-- Flag Button -->
+          <button id="exam-flag-btn" onclick="examUI.toggleFlagCurrent()" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">Marcar</span>
+          </button>
+        </div>
+
+        <!-- Question Grid Palette (Quick navigation) -->
+        <div class="glass-panel p-3 rounded-2xl border border-slate-800 mb-4">
+          <div class="text-[11px] text-slate-400 mb-2 font-medium flex items-center justify-between">
+            <span>Navegación rápida de preguntas:</span>
+            <span class="text-[10px] text-slate-500 font-mono"><strong id="exam-answered-count" class="text-brand-400">0</strong> / 25 respondidas</span>
+          </div>
+          <div id="exam-palette" class="grid grid-cols-10 sm:grid-cols-25 gap-1.5">
+            <!-- 25 question pills -->
+          </div>
+        </div>
+
+        <!-- Current Question Card -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 flex-1 flex flex-col justify-between mb-4">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span id="exam-current-id-badge" class="text-xs font-mono text-slate-400">#1001</span>
+              <span id="exam-current-task-badge" class="text-xs text-indigo-400 font-semibold">Gobierno, legislación y participación ciudadana</span>
+            </div>
+
+            <h3 id="exam-current-question-text" class="text-lg sm:text-xl font-bold text-white mb-6">
+              ...
+            </h3>
+
+            <!-- Options (Radio-style buttons) -->
+            <div id="exam-current-options" class="space-y-3">
+              <!-- Options rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Bottom Navigation -->
+          <div class="pt-6 border-t border-slate-800 flex items-center justify-between mt-6">
+            <button id="exam-prev-btn" onclick="examUI.prevQuestion()" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-semibold flex items-center gap-1.5 border border-slate-800 transition">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Anterior
+            </button>
+
+            <button onclick="examUI.confirmFinishExam()" class="px-4 py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 text-xs font-bold flex items-center gap-1.5 transition">
+              <i data-lucide="check" class="w-4 h-4"></i> Entregar Examen
+            </button>
+
+            <button id="exam-next-btn" onclick="examUI.nextQuestion()" class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold flex items-center gap-1.5 shadow-lg shadow-brand-500/20 transition">
+              Siguiente <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM RESULTS SCREEN -->
+      <div id="exam-results-screen" class="hidden flex-1 flex flex-col">
+        <!-- Results Banner -->
+        <div id="exam-result-banner" class="p-8 rounded-3xl text-center border mb-6 glass-panel">
+          <div id="exam-result-badge-icon" class="w-20 h-20 rounded-3xl mx-auto flex items-center justify-center mb-4">
+            <!-- Icon -->
+          </div>
+          <span id="exam-verdict-tag" class="text-xs uppercase font-extrabold tracking-widest px-3 py-1 rounded-full border mb-2 inline-block">APTO</span>
+          <h2 id="exam-score-title" class="text-3xl sm:text-4xl font-extrabold text-white mb-2">22 / 25 Aciertos</h2>
+          <p id="exam-feedback-text" class="text-sm text-slate-300 max-w-md mx-auto mb-6">
+            ¡Felicidades! Has superado el simulacro oficial CCSE con creces.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <button onclick="examUI.startExam()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs transition flex items-center gap-2">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Repetir Simulacro
+            </button>
+            <button onclick="app.switchView('anki')" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs transition border border-slate-700">
+              <i data-lucide="brain" class="w-4 h-4"></i> Volver al Modo Anki
+            </button>
+          </div>
+        </div>
+
+        <!-- Task Breakdown & Question Review -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800 mb-6">
+          <h4 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+            <i data-lucide="pie-chart" class="w-4 h-4 text-brand-400"></i> Desglose por Tareas
+          </h4>
+          <div id="exam-task-breakdown" class="grid grid-cols-1 sm:grid-cols-5 gap-3">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Questions Review Detail List -->
+        <div class="glass-panel p-6 rounded-3xl border border-slate-800">
+          <h4 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+            <i data-lucide="list-checks" class="w-4 h-4 text-brand-400"></i> Revisión Detallada de las 25 Preguntas
+          </h4>
+          <div id="exam-review-list" class="space-y-4">
+            <!-- Review items -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- VIEW 4: ESTADÍSTICAS Y ANALÍTICA DE PROGRESO -->
+    <!-- ========================================================================= -->
+    <section id="view-stats" class="hidden flex-1 flex flex-col w-full max-w-4xl mx-auto">
+      
+      <!-- Stats Title -->
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-2xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
+            <i data-lucide="bar-chart-3" class="w-6 h-6 text-brand-400"></i>
+            Estadísticas y Dominio de las 300 Preguntas
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Métricas de retención y estado del algoritmo Anki / SM-2.</p>
+        </div>
+      </div>
+
+      <!-- Top Metric Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+        <div class="p-5 glass-panel rounded-2xl border border-slate-800">
+          <div class="text-xs text-slate-400 font-medium mb-1">Tarjetas Dominadas</div>
+          <div id="stat-mastered-val" class="text-2xl font-extrabold text-emerald-400 font-mono">0</div>
+          <div class="text-[11px] text-emerald-500/80 mt-1">Intervalo ≥ 21 días</div>
+        </div>
+
+        <div class="p-5 glass-panel rounded-2xl border border-slate-800">
+          <div class="text-xs text-slate-400 font-medium mb-1">En Repaso / Memoria</div>
+          <div id="stat-review-val" class="text-2xl font-extrabold text-blue-400 font-mono">0</div>
+          <div class="text-[11px] text-blue-400/80 mt-1">En proceso de fijación</div>
+        </div>
+
+        <div class="p-5 glass-panel rounded-2xl border border-slate-800">
+          <div class="text-xs text-slate-400 font-medium mb-1">Aprendiendo / Difíciles</div>
+          <div id="stat-learning-val" class="text-2xl font-extrabold text-amber-400 font-mono">0</div>
+          <div class="text-[11px] text-amber-400/80 mt-1">Lapsos o fallos</div>
+        </div>
+
+        <div class="p-5 glass-panel rounded-2xl border border-slate-800">
+          <div class="text-xs text-slate-400 font-medium mb-1">Sin Estudiar (Nuevas)</div>
+          <div id="stat-new-val" class="text-2xl font-extrabold text-slate-400 font-mono">300</div>
+          <div class="text-[11px] text-slate-500 mt-1">Por ver por primera vez</div>
+        </div>
+      </div>
+
+      <!-- Task Progress Breakdown -->
+      <div class="glass-panel p-6 rounded-3xl border border-slate-800 mb-6">
+        <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+          <i data-lucide="layers" class="w-4 h-4 text-brand-400"></i> Progreso por Tarea
+        </h3>
+        <div id="stats-tasks-bars" class="space-y-4">
+          <!-- Progress bar per task -->
+        </div>
+      </div>
+
+      <!-- Data Management / Backup -->
+      <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="text-sm font-bold text-white">Copia de Seguridad y Datos</h4>
+          <p class="text-xs text-slate-400 mt-0.5">Exporta o importa tu progreso SRS en formato JSON.</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="app.exportBackup()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 text-xs font-semibold flex items-center gap-2 transition">
+            <i data-lucide="download" class="w-4 h-4"></i> Exportar
+          </button>
+          <button onclick="app.openImportModal()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 text-xs font-semibold flex items-center gap-2 transition">
+            <i data-lucide="upload" class="w-4 h-4"></i> Importar
+          </button>
+          <button onclick="app.confirmResetProgress()" class="px-4 py-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-semibold flex items-center gap-2 transition">
+            <i data-lucide="trash-2" class="w-4 h-4"></i> Reiniciar
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: AJUSTES Y CONFIGURACIÓN -->
+  <!-- ========================================================================= -->
+  <div id="settings-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+    <div class="glass-panel max-w-md w-full rounded-3xl p-6 border border-slate-800 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="settings" class="w-5 h-5 text-brand-400"></i> Ajustes de Estudio
+        </h3>
+        <button onclick="app.closeSettingsModal()" class="text-slate-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div>
+          <label class="block text-slate-300 font-semibold mb-1">Nuevas tarjetas por día (Límite Anki):</label>
+          <input type="number" id="setting-new-cards" min="5" max="100" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 font-mono" value="20">
+          <span class="text-[11px] text-slate-500">Recomendado: 20 tarjetas diarias para dominar las 300 en 15 días.</span>
+        </div>
+
+        <div class="pt-3 border-t border-slate-800">
+          <h4 class="font-bold text-slate-300 mb-2">Atajos de Teclado</h4>
+          <div class="space-y-1 text-slate-400 text-[11px]">
+            <div class="flex justify-between"><span>Mostrar Respuesta / Voltear:</span> <kbd class="font-mono bg-slate-800 px-1.5 py-0.5 rounded">Espacio / Enter</kbd></div>
+            <div class="flex justify-between"><span>Calificar (Otra vez, Difícil, Bien, Fácil):</span> <kbd class="font-mono bg-slate-800 px-1.5 py-0.5 rounded">1, 2, 3, 4</kbd></div>
+            <div class="flex justify-between"><span>Seleccionar Opción:</span> <kbd class="font-mono bg-slate-800 px-1.5 py-0.5 rounded">A, B, C / 1, 2</kbd></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 flex justify-end gap-2">
+        <button onclick="app.saveSettingsFromModal()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-semibold text-xs transition">
+          Guardar Ajustes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: IMPORTAR RESPALDO -->
+  <div id="import-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+    <div class="glass-panel max-w-lg w-full rounded-3xl p-6 border border-slate-800 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <i data-lucide="upload" class="w-5 h-5 text-brand-400"></i> Importar Progreso JSON
+        </h3>
+        <button onclick="app.closeImportModal()" class="text-slate-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-400 mb-3">Pega aquí el contenido del archivo JSON exportado anteriormente:</p>
+      <textarea id="import-json-textarea" rows="6" placeholder='{"version": "1.0", "cards": { ... }}' class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs font-mono text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+
+      <div class="mt-4 flex justify-end gap-2">
+        <button onclick="app.closeImportModal()" class="px-4 py-2 bg-slate-800 text-slate-300 rounded-xl font-semibold text-xs">
+          Cancelar
+        </button>
+        <button onclick="app.processImport()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-semibold text-xs">
+          Restaurar Progreso
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="js/storage.js"></script>
+  <script src="js/srs-engine.js"></script>
+  <script src="js/exam-engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
