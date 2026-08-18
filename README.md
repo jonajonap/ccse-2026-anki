@@ -58,7 +58,7 @@ Este proyecto está listo para ser publicado en **GitHub Pages**:
 4. En **Build and deployment** > **Branch**, selecciona `main` y la carpeta `/ (root)`.
 5. Haz clic en **Save**. En un par de minutos, tu aplicación estará disponible en:
    ```
-   https://TU_USUARIO.github.io/TU_REPOSITORIO/
+   https://jonajonap.github.io/ccse-2026-anki/
    ```
 
 ---
@@ -69,8 +69,8 @@ Si deseas probar o modificar la aplicación en tu propio ordenador:
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/cervantes-ccse-2026.git
-cd cervantes-ccse-2026
+git clone https://github.com/jonajonap/ccse-2026-anki.git
+cd ccse-2026-anki
 
 # 2. Iniciar un servidor web local sencillo con Python
 python3 -m http.server 3000
