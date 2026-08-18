@@ -3,7 +3,12 @@
 [![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-blue.svg)](LICENSE)
 [![Edición: CCSE 2026](https://img.shields.io/badge/CCSE-Edici%C3%B3n%202026-emerald.svg)](#fuente-de-las-preguntas)
 [![Preguntas: 300/300](https://img.shields.io/badge/Preguntas-300%20Oficiales-purple.svg)](#estructura-del-banco-de-preguntas)
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-black?logo=github)](https://pages.github.com/)
+[![Probar Online](https://img.shields.io/badge/Web_App-Probar_Online-2563eb?style=for-the-badge&logo=google-chrome&logoColor=white)](https://jonajonap.github.io/ccse-2026-anki/)
+
+> ### 🌐 [👉 **CLIC AQUÍ PARA ABRIR Y PROBAR LA APLICACIÓN GRATIS ONLINE** 👈](https://jonajonap.github.io/ccse-2026-anki/)
+> **No requiere instalación, descargas ni registros.** Funciona directamente desde cualquier navegador web en tu móvil, tablet o PC con guardado automático de tu progreso.
+
+---
 
 Aplicación web interactiva, moderna y de código abierto para preparar y memorizar las **300 preguntas oficiales de la prueba CCSE 2026** (Conocimientos Constitucionales y Socioculturales de España) del Instituto Cervantes para la obtención de la nacionalidad española.
 
