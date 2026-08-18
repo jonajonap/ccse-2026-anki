@@ -95,6 +95,72 @@ pip install -r requirements.txt
 python extract_ccse_questions.py
 ```
 
+## 💡 ¿Por qué usar el Método Anki (SRS) para el CCSE?
+
+El temario oficial contiene **300 preguntas**. El método tradicional de releer el PDF una y otra vez genera una alta tasa de olvido (*curva del olvido de Ebbinghaus*). La **Repetición Espaciada (Spaced Repetition System)** optimiza el tiempo de estudio repasando cada pregunta justo antes de que tu cerebro la olvide.
+
+| Característica | Método Tradicional (Lectura de PDF) | Sistema Anki SRS (Esta Aplicación) |
+| :--- | :--- | :--- |
+| **Tiempo de estudio** | 30 - 45 días | **10 - 15 días (20 tarjetas/día)** |
+| **Preguntas dominadas** | Se repiten sin necesidad | **Solo se repiten las que te cuestan** |
+| **Retención a largo plazo** | Baja (~30% a las 2 semanas) | **Alta (>90% de retención)** |
+| **Práctica de examen** | Estática en papel | **Simulacro oficial de 25 preguntas con temporizador** |
+| **Accesibilidad** | Requiere visor PDF | **100% interactivo en móvil o PC sin instalar nada** |
+
+---
+
+## ❓ Preguntas Frecuentes (FAQ sobre la Prueba CCSE)
+
+<details>
+<summary><strong>¿Qué es la prueba CCSE del Instituto Cervantes?</strong></summary>
+<p>
+La prueba de <strong>Conocimientos Constitucionales y Socioculturales de España (CCSE)</strong> es un examen obligatorio administrado por el Instituto Cervantes para todas aquellas personas que solicitan la <strong>nacionalidad española por residencia</strong> o por origen sefardí.
+</p>
+</details>
+
+<details>
+<summary><strong>¿Cuántas preguntas tiene el examen CCSE y cuántas hay que acertar para ser APTO?</strong></summary>
+<p>
+El examen consta de <strong>25 preguntas</strong> extraídas aleatoriamente de un banco oficial de 300 preguntas. Para obtener la calificación de <strong>APTO (Aprobado)</strong> es necesario responder correctamente al menos <strong>15 de las 25 preguntas (60%)</strong>. Las respuestas erróneas no restan puntuación.
+</p>
+</details>
+
+<details>
+<summary><strong>¿Cuánto tiempo dura el examen oficial?</strong></summary>
+<p>
+El tiempo máximo oficial para realizar la prueba es de <strong>45 minutos</strong>. El simulador incluido en esta aplicación cuenta con un temporizador idéntico al oficial.
+</p>
+</details>
+
+<details>
+<summary><strong>¿Cómo están distribuidas las preguntas del examen por temas?</strong></summary>
+<p>
+Las 25 preguntas del examen oficial siempre siguen la misma distribución de tareas:
+<ul>
+  <li><strong>Tarea 1 (Gobierno y legislación):</strong> 10 preguntas.</li>
+  <li><strong>Tarea 2 (Derechos y deberes):</strong> 3 preguntas (Verdadero/Falso).</li>
+  <li><strong>Tarea 3 (Geografía y territorio):</strong> 2 preguntas.</li>
+  <li><strong>Tarea 4 (Cultura e historia):</strong> 3 preguntas.</li>
+  <li><strong>Tarea 5 (Sociedad española):</strong> 7 preguntas.</li>
+</ul>
+El simulador de esta aplicación replica con total exactitud esta proporción.
+</p>
+</details>
+
+<details>
+<summary><strong>¿Se guardan mis respuestas y progreso si cierro el navegador?</strong></summary>
+<p>
+<strong>Sí.</strong> Todo el estado de tus tarjetas, repeticiones, tarjetas dominadas y racha de días se guarda automáticamente en el <code>LocalStorage</code> de tu navegador. Además, puedes exportar una copia de seguridad en JSON desde el panel de estadísticas.
+</p>
+</details>
+
+<details>
+<summary><strong>¿Puedo usar la aplicación sin conexión o en mi teléfono móvil?</strong></summary>
+<p>
+<strong>Sí.</strong> La aplicación está 100% optimizada para dispositivos móviles (Android / iOS), tablets y ordenadores portátiles.
+</p>
+</details>
+
 ---
 
 ## 📖 Fuente de las Preguntas
