@@ -512,7 +512,12 @@ class CCSEApp {
   openSettingsModal() {
     const modal = document.getElementById('settings-modal');
     const input = document.getElementById('setting-new-cards');
-    if (input) input.value = this.storage.getSettings().newCardsPerDay || 20;
+    const orderSelect = document.getElementById('setting-random-order');
+    const settings = this.storage.getSettings();
+
+    if (input) input.value = settings.newCardsPerDay || 20;
+    if (orderSelect) orderSelect.value = settings.randomOrder !== false ? 'true' : 'false';
+
     if (modal) modal.classList.remove('hidden');
     if (window.lucide) window.lucide.createIcons();
   }
@@ -524,8 +529,14 @@ class CCSEApp {
 
   saveSettingsFromModal() {
     const input = document.getElementById('setting-new-cards');
+    const orderSelect = document.getElementById('setting-random-order');
     const val = parseInt(input.value, 10) || 20;
-    this.storage.saveSettings({ newCardsPerDay: val });
+    const isRandom = orderSelect ? orderSelect.value === 'true' : true;
+
+    this.storage.saveSettings({
+      newCardsPerDay: val,
+      randomOrder: isRandom
+    });
     this.closeSettingsModal();
     this.startAnkiSession(this.currentDeckFilter);
   }

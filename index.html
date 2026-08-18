@@ -984,8 +984,17 @@
           <input type="number" id="setting-new-cards" min="5" max="100"
             class="w-full border-2 border-black p-2.5 font-mono text-sm font-black text-black outline-none focus:bg-yellow-50"
             value="20">
-          <span class="text-[11px] text-ink-muted mt-1 block font-bold">Recomendación: 20 diarias para completar en 15
-            días.</span>
+          <span class="text-[11px] text-ink-muted mt-1 block font-bold">Recomendación: 20 diarias para completar en 15 días.</span>
+        </div>
+
+        <div>
+          <label class="block text-black font-black uppercase mb-1">ORDEN DE LAS TARJETAS:</label>
+          <select id="setting-random-order"
+            class="w-full border-2 border-black p-2.5 font-mono text-xs font-bold text-black outline-none focus:bg-yellow-50 bg-white cursor-pointer">
+            <option value="true">ALEATORIO / BARAJADO (ESTILO ANKI)</option>
+            <option value="false">SECUENCIAL (POR ID / TAREA 1 A 5)</option>
+          </select>
+          <span class="text-[11px] text-ink-muted mt-1 block font-bold">Mezcla las preguntas nuevas para un estudio más variado e interactivo.</span>
         </div>
 
         <div class="pt-3 border-t-2 border-black">

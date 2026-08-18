@@ -104,16 +104,25 @@ describe('SRSEngine (SuperMemo SM-2 Algorithm)', () => {
     assert.equal(r2.interval, 7);
   });
 
-  test('Generación de cola de estudio (Study Queue)', () => {
+  test('Generación de cola de estudio (Study Queue) y orden aleatorio/secuencial', () => {
     const mockQuestions = [
       { id: 1001, tarea: 1 },
       { id: 1002, tarea: 1 },
       { id: 2001, tarea: 2 }
     ];
 
-    // Nuevas tarjetas
-    const queue = srs.getStudyQueue(mockQuestions, { mode: 'srs' });
-    assert.equal(queue.length, 3);
+    // Nuevas tarjetas (modo secuencial explícito)
+    const queueSequential = srs.getStudyQueue(mockQuestions, { mode: 'srs', shuffle: false });
+    assert.equal(queueSequential.length, 3);
+    assert.equal(queueSequential[0].id, 1001);
+    assert.equal(queueSequential[1].id, 1002);
+    assert.equal(queueSequential[2].id, 2001);
+
+    // Nuevas tarjetas (modo aleatorio por defecto)
+    const queueRandom = srs.getStudyQueue(mockQuestions, { mode: 'srs' });
+    assert.equal(queueRandom.length, 3);
+    const ids = queueRandom.map(q => q.id).sort();
+    assert.deepEqual(ids, [1001, 1002, 2001]);
 
     // Tarjeta vencida hoy
     const yesterday = new Date();
@@ -130,6 +139,17 @@ describe('SRSEngine (SuperMemo SM-2 Algorithm)', () => {
     const queueWithDue = srs.getStudyQueue(mockQuestions, { mode: 'srs' });
     // La primera debe ser la vencida
     assert.equal(queueWithDue[0].id, 1001);
+  });
+
+  test('Barajado de arrays con shuffleArray', () => {
+    const original = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const shuffled = srs.shuffleArray(original);
+    
+    // No muta el original
+    assert.deepEqual(original, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    // Mantiene la misma longitud y elementos
+    assert.equal(shuffled.length, original.length);
+    assert.deepEqual([...shuffled].sort((a, b) => a - b), original);
   });
 
   test('Cálculo de estadísticas generales', () => {

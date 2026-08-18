@@ -115,10 +115,11 @@ class SRSEngine {
    * Incluye tarjetas pendientes (due) + tarjetas nuevas según el límite diario.
    */
   getStudyQueue(allQuestions, options = {}) {
-    const { taskFilter = null, mode = 'srs', limit = null } = options;
+    const { taskFilter = null, mode = 'srs', limit = null, shuffle = null } = options;
     const todayStr = new Date().toISOString().split('T')[0];
     const states = this.storage.getCardsState();
     const settings = this.storage.getSettings();
+    const isRandomOrder = shuffle !== null ? Boolean(shuffle) : (settings.randomOrder !== false);
 
     let filtered = allQuestions;
     if (taskFilter && taskFilter !== 'all') {
@@ -127,25 +128,33 @@ class SRSEngine {
 
     if (mode === 'all') {
       // Modo libre: todas las preguntas filtradas
-      return filtered.map(q => ({
+      let queue = filtered.map(q => ({
         ...q,
         srs: this.getCardSRS(q.id)
       }));
+      if (isRandomOrder) {
+        queue = this.shuffleArray(queue);
+      }
+      return limit && limit > 0 ? queue.slice(0, limit) : queue;
     }
 
     if (mode === 'difficult') {
       // Modo difíciles: tarjetas con lapsos o marcadas como 'learning'
-      return filtered
+      let queue = filtered
         .filter(q => {
           const srs = states[q.id];
           return srs && (srs.lapses > 0 || srs.state === 'learning' || srs.easeFactor < 2.0);
         })
         .map(q => ({ ...q, srs: this.getCardSRS(q.id) }));
+      if (isRandomOrder) {
+        queue = this.shuffleArray(queue);
+      }
+      return limit && limit > 0 ? queue.slice(0, limit) : queue;
     }
 
     // Modo SRS estándar Anki:
-    const dueCards = [];
-    const newCards = [];
+    let dueCards = [];
+    let newCards = [];
 
     filtered.forEach(q => {
       const srs = states[q.id] || this.getCardSRS(q.id);
@@ -156,7 +165,13 @@ class SRSEngine {
       }
     });
 
-    // Barajar nuevas tarjetas y aplicar límite de nuevas por día
+    // Barajar tarjetas si el modo aleatorio está activado
+    if (isRandomOrder) {
+      dueCards = this.shuffleArray(dueCards);
+      newCards = this.shuffleArray(newCards);
+    }
+
+    // Aplicar límite de nuevas por día
     const maxNew = settings.newCardsPerDay || 20;
     const selectedNew = newCards.slice(0, maxNew);
 
@@ -168,6 +183,18 @@ class SRSEngine {
     }
 
     return queue;
+  }
+
+  /**
+   * Baraja un array usando el algoritmo Fisher-Yates sin mutar el original.
+   */
+  shuffleArray(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
   }
 
   /**

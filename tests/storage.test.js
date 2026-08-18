@@ -33,14 +33,17 @@ describe('CCSEStorage (Persistencia y Backup)', () => {
     const defaultSettings = storage.getSettings();
     assert.equal(defaultSettings.newCardsPerDay, 20);
     assert.equal(defaultSettings.theme, 'light');
+    assert.equal(defaultSettings.randomOrder, true);
 
-    const updated = storage.saveSettings({ theme: 'dark', newCardsPerDay: 30 });
+    const updated = storage.saveSettings({ theme: 'dark', newCardsPerDay: 30, randomOrder: false });
     assert.equal(updated.theme, 'dark');
     assert.equal(updated.newCardsPerDay, 30);
+    assert.equal(updated.randomOrder, false);
 
     const reloaded = storage.getSettings();
     assert.equal(reloaded.theme, 'dark');
     assert.equal(reloaded.newCardsPerDay, 30);
+    assert.equal(reloaded.randomOrder, false);
   });
 
   test('Guardado y recuperación de tarjetas SRS', () => {
