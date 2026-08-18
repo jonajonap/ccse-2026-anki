@@ -234,4 +234,9 @@ class SRSEngine {
   }
 }
 
-window.SRSEngine = SRSEngine;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { SRSEngine };
+}
+if (typeof window !== 'undefined') {
+  window.SRSEngine = SRSEngine;
+}

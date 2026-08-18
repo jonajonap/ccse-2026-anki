@@ -1,0 +1,24 @@
+{
+  "name": "ccse-2026-anki",
+  "version": "1.0.0",
+  "description": "Aplicación web interactiva para preparar el examen CCSE 2026 con Anki SRS y simulador oficial.",
+  "main": "js/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:js": "node --test tests/*.test.js",
+    "test:py": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:all": "npm run test:js && npm run test:py",
+    "extract": "python3 extract_ccse_questions.py"
+  },
+  "keywords": [
+    "ccse",
+    "cervantes",
+    "anki",
+    "srs",
+    "spaced-repetition",
+    "nacionalidad-espanola"
+  ],
+  "author": "jonajonap",
+  "license": "MIT"
+}

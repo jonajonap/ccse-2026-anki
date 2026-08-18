@@ -172,12 +172,6 @@
         min-height: 0;
         overflow-y: auto;
       }
-      #view-anki {
-        min-height: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
     }
 
     .scrollbar-none::-webkit-scrollbar {
@@ -386,7 +380,7 @@
       <!-- ========================================================================= -->
       <!-- VIEW 1: MODO ANKI / FLASHCARDS SRS -->
       <!-- ========================================================================= -->
-      <section id="view-anki" class="flex-1 flex flex-col max-w-3xl mx-auto w-full justify-between">
+      <section id="view-anki" class="min-h-0 flex-1 flex flex-col max-w-3xl mx-auto w-full justify-between">
 
         <!-- Top Deck Filters & Telemetría bar (Single compact row on mobile) -->
         <div class="flex items-center justify-between gap-1.5 sm:gap-3 mb-1.5 sm:mb-3 shrink-0">

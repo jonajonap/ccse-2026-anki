@@ -152,4 +152,9 @@ class CCSEStorage {
   }
 }
 
-window.ccseStorage = new CCSEStorage();
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { CCSEStorage, STORAGE_KEYS, DEFAULT_SETTINGS };
+}
+if (typeof window !== 'undefined') {
+  window.ccseStorage = new CCSEStorage();
+}

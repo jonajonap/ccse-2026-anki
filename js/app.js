@@ -98,6 +98,11 @@ class CCSEApp {
       this.renderStatsView();
     }
 
+    // Reset scroll position al cambiar de sección
+    const mainWrapper = document.getElementById('main-content-wrapper');
+    if (mainWrapper) mainWrapper.scrollTop = 0;
+    window.scrollTo(0, 0);
+
     this.updateGlobalBadges();
     if (window.lucide) window.lucide.createIcons();
   }

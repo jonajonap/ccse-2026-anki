@@ -133,4 +133,9 @@ class ExamEngine {
   }
 }
 
-window.ExamEngine = ExamEngine;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { ExamEngine, EXAM_DISTRIBUTION };
+}
+if (typeof window !== 'undefined') {
+  window.ExamEngine = ExamEngine;
+}
